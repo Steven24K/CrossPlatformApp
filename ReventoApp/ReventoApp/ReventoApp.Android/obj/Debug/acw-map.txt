@@ -1,0 +1,4 @@
+ReventoApp.Droid.MainActivity, ReventoApp.Android;md53a0c7ffc1c8b134b3615520b05ba8659.MainActivity
+ReventoApp.Droid.MainActivity, ReventoApp.Android, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md53a0c7ffc1c8b134b3615520b05ba8659.MainActivity
+ReventoApp.Droid.MainActivity;md53a0c7ffc1c8b134b3615520b05ba8659.MainActivity
+reventoapp.droid.MainActivity;md53a0c7ffc1c8b134b3615520b05ba8659.MainActivity
