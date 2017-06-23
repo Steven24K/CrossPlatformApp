@@ -1,9 +1,0 @@
-C:\Users\steve\documents\visual studio 2017\Projects\ReventoApp\ReventoApp\ReventoApp.iOS\bin\iPhone\Debug\ReventoApp.iOS.exe
-C:\Users\steve\documents\visual studio 2017\Projects\ReventoApp\ReventoApp\ReventoApp.iOS\bin\iPhone\Debug\ReventoApp.iOS.pdb
-C:\Users\steve\documents\visual studio 2017\Projects\ReventoApp\ReventoApp\ReventoApp.iOS\obj\iPhone\Debug\ibtool\_BundleResourceWithLogicalName.items
-C:\Users\steve\documents\visual studio 2017\Projects\ReventoApp\ReventoApp\ReventoApp.iOS\obj\iPhone\Debug\actool\_PartialAppManifest.items
-C:\Users\steve\documents\visual studio 2017\Projects\ReventoApp\ReventoApp\ReventoApp.iOS\obj\iPhone\Debug\actool\_BundleResourceWithLogicalName.items
-C:\Users\steve\documents\visual studio 2017\Projects\ReventoApp\ReventoApp\ReventoApp.iOS\obj\iPhone\Debug\optimized\
-C:\Users\steve\documents\visual studio 2017\Projects\ReventoApp\ReventoApp\ReventoApp.iOS\obj\iPhone\Debug\ReventoApp.iOS.csprojResolveAssemblyReference.cache
-C:\Users\steve\documents\visual studio 2017\Projects\ReventoApp\ReventoApp\ReventoApp.iOS\obj\iPhone\Debug\ReventoApp.iOS.exe
-C:\Users\steve\documents\visual studio 2017\Projects\ReventoApp\ReventoApp\ReventoApp.iOS\obj\iPhone\Debug\ReventoApp.iOS.pdb
