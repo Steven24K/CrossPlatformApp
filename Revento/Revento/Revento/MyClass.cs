@@ -6,12 +6,9 @@ namespace Revento
     /// Shared code
     /// </summary>
 	public class MyClass {
-        private string dbfile = "";
-
 		public MyClass ()
 		{
 
-		}
+        }
 	}
 }
-
