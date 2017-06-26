@@ -1,9 +1,5 @@
 <resources>
-   <item name="item">
-      <string name="title">Welcome to the future</string>
-      <string name="date">26 juli 2017</string>
-      <string name="description">Swag alles ft. Steven de Swaggerboy xxxx 420 360 69</string>
-      <!-- Image will be a link -->
-      <string name="image">http://via.placeholder.com/350x150</string>
-   </item>
+    <event>
+        <title>Welcome to the Future</title>
+    </event>
 </resources>
