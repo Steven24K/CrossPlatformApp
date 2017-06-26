@@ -24,12 +24,14 @@ namespace Revento.Droid
             // Set our view from the "main" layout resource
 
             ListView.FastScrollEnabled = true;
-            EventList = new string[] { "De Parade", "Oh ja joh hoezo dan?!", "Hart voor de zaak", "Klein geluk" };
+            //EventList = new string[] { "De Parade", "Oh ja joh hoezo dan?!", "Hart voor de zaak", "Klein geluk" };
             Description = new string[] {"Het grootste theater festival van Rotterdam","De gepasioneerde schiedammer" ,"Een tour door schiedam zuid","De schiedamse natuur en zijn verhalen"  };
-            
+
+		    XMLReader xmlreader = new XMLReader("");
+		    EventList = xmlreader.RetrieveXML();
+
             this.ListAdapter = new MainScreenAdapter(EventList,Description,this);
            
-
         }
         protected override void OnListItemClick(ListView l, View v, int position, long id) {
             var t = EventList[position];
