@@ -1,0 +1,1 @@
+c:\users\folkert\documents\visual studio 2017\Projects\ReventoV3\ReventoV3\ReventoV3.UWP\ReventoV3.UWP.csproj;x86
