@@ -11,11 +11,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Revento.UWP", "Revento\Reve
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Revento", "Revento\Revento\Revento.shproj", "{7F155F18-D824-46CD-BF54-6E466A70FA26}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0EF4A965-CA45-4A46-9B88-4361F0CAAFCC}"
-	ProjectSection(SolutionItems) = preProject
-		Revento\Revento\events.xml = Revento\Revento\events.xml
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		Revento\Revento\Revento.projitems*{05d13234-714f-48e3-ab5d-8375755de1ea}*SharedItemsImports = 4

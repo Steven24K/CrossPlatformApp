@@ -1,5 +1,8 @@
 ﻿using System;
-
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Threading.Tasks;
 using Android.App;
 using Android.Content;
 using Android.Runtime;
@@ -7,38 +10,37 @@ using Android.Views;
 using Android.Widget;
 
 using Android.OS;
-using Android.Support.V7.CardView;
+using System.Xml;
+using System.Xml.Linq;
+using Android.Content.Res;
+using Android.Util;
 
 namespace Revento.Droid
 {
-	[Activity (Label = "Revento", MainLauncher = true, Icon = "@drawable/icon")]
-	public class MainActivity : ListActivity
-	{
+    [Activity(Label = "Revento", MainLauncher = false, Icon = "@drawable/icon")]
+    public class MainActivity : ListActivity
+    {
+        //private string EventList[];
 
-        string[] EventList, Description;
-        
-        protected override void OnCreate (Bundle bundle)
-		{
-			base.OnCreate (bundle);
+        //protected override void OnCreate(Bundle bundle)
+        //{
+        //    base.OnCreate(bundle);
 
-            // Set our view from the "main" layout resource
+        //    XmlDocument doc = new XmlDocument();
+        //    doc.Load("events.xml");
 
-            ListView.FastScrollEnabled = true;
-            //EventList = new string[] { "De Parade", "Oh ja joh hoezo dan?!", "Hart voor de zaak", "Klein geluk" };
-            Description = new string[] {"Het grootste theater festival van Rotterdam","De gepasioneerde schiedammer" ,"Een tour door schiedam zuid","De schiedamse natuur en zijn verhalen"  };
+        //    foreach (var item in doc.FirstChild.ChildNodes)
+        //    {
+        //        // listView.Items.Add(((XmlNode) item).InnerText);
+        //    }
 
-		    XMLReader xmlreader = new XMLReader("");
-		    EventList = xmlreader.RetrieveXML();
+        //    this.ListAdapter = new MainScreenAdapter(EventList, EventLogTags.Description, this);
+        //}
 
-            this.ListAdapter = new MainScreenAdapter(EventList,Description,this);
-           
-        }
-        protected override void OnListItemClick(ListView l, View v, int position, long id) {
-            var t = EventList[position];
-            Android.Widget.Toast.MakeText(this, t, Android.Widget.ToastLength.Short).Show();
-        }
-
+        //protected override void OnListItemClick(ListView l, View v, int position, long id)
+        //{
+        //    var t = EventList[position];
+        //    Android.Widget.Toast.MakeText(this, t, Android.Widget.ToastLength.Short).Show();
+        //}
     }
 }
-
-
