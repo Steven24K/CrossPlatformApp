@@ -1,5 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 	<uses-sdk android:minSdkVersion="15" />
+    <meta-data
+        android:name="com.google.android.geo.API_KEY"
+        android:value="AIzaSyB5KtMLWOVJ4Dt476-Gp61NWRGv6peXxMM"/>
 	<application android:label="Revento.Android"></application>
 </manifest>
