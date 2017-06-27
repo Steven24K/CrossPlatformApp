@@ -95,7 +95,10 @@
     <AndroidResource Include="Resources\drawable-xxxhdpi\Icon.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\events.xml" />
+    <AndroidAsset Include="Assets\events.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </AndroidAsset>
   </ItemGroup>
   <Import Project="..\Revento\Revento.projitems" Label="Shared" Condition="Exists('..\Revento\Revento.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />

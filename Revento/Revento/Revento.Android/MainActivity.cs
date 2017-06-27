@@ -26,14 +26,6 @@ namespace Revento.Droid
         //{
         //    base.OnCreate(bundle);
 
-        //    XmlDocument doc = new XmlDocument();
-        //    doc.Load("events.xml");
-
-        //    foreach (var item in doc.FirstChild.ChildNodes)
-        //    {
-        //        // listView.Items.Add(((XmlNode) item).InnerText);
-        //    }
-
         //    this.ListAdapter = new MainScreenAdapter(EventList, EventLogTags.Description, this);
         //}
 
