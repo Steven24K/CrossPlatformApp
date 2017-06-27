@@ -9,6 +9,7 @@
     <Import_RootNamespace>Revento</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Iterator.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)MyClass.cs" />
   </ItemGroup>
   <ItemGroup>

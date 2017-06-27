@@ -1,4 +1,7 @@
 ﻿using System;
+using System.IO;
+using System.Xml.Linq;
+using System.Collections.Generic;
 
 using Android.App;
 using Android.Content;
@@ -22,10 +25,27 @@ namespace Revento.Droid
 			base.OnCreate (bundle);
 
             // Set our view from the "main" layout resource
+            Stream xmldoc = Assets.Open("events.xml");
+
+            /// Linq werkt niet bij android, dus push xmldoc naar de shared code dmv een method
+            /// Bewerk xmldoc in de shared code zodat er een string[] uitkomt
+            /// Return de bewerkte xmldoc en voeg deze toe in de items array
+
+            // Lees het xml bestand door van voor naar achteren -> je krijgt hierbij de xml tags
+            StreamReader reader = new StreamReader(xmldoc);
+            string readertext = reader.ReadToEnd();
+
+            // Maak van de gelezen xml een XDocument object
+            XDocument xdoc = XDocument.Parse(readertext);
+            //string[] ProcessedXML = XMLProcesser.SendXML(xdoc, "description");
+            List<string> TitleList = new List<string>();
+
 
             ListView.FastScrollEnabled = true;
-            EventList = new string[] { "De Parade", "Oh ja joh hoezo dan?!", "Hart voor de zaak", "Klein geluk" };
-            Description = new string[] {"Het grootste theater festival van Rotterdam","De gepasioneerde schiedammer" ,"Een tour door schiedam zuid","De schiedamse natuur en zijn verhalen"  };
+            //EventList = new string[] { "De Parade", "Oh ja joh hoezo dan?!", "Hart voor de zaak", "Klein geluk" };
+            EventList = XMLProcesser.SendXML(xdoc, "title"); 
+            Description = XMLProcesser.SendXML(xdoc, "description"); 
+            //Description = new string[] {"Het grootste theater festival van Rotterdam","De gepasioneerde schiedammer" ,"Een tour door schiedam zuid","De schiedamse natuur en zijn verhalen"  };
             
 
 		    //XMLReader xmlreader = new XMLReader("");
