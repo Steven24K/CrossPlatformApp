@@ -30,6 +30,7 @@ namespace Revento
         bool hasNext();
         void Add(T item);
         T[] GetCollection();
+        int GetAmountOfItems { get; }
     }
 
     public class ArrayItterator<T> : Itterator<T>
@@ -38,7 +39,7 @@ namespace Revento
         private int Current, Size, AmountOfItems;
         public ArrayItterator()
         {
-            this.Size = 1;
+            this.Size = 100;
             this._Array = new T[Size];
             AmountOfItems = 0;
             this.Current = -1;
@@ -69,7 +70,7 @@ namespace Revento
 
         public bool hasNext()
         {
-            if (Current < _Array.Length && _Array[Current] != null) return true;
+            if (Current < _Array.Length | _Array[Current+1] != null) return true;
             return false;
         }
 
@@ -77,5 +78,8 @@ namespace Revento
         {
             return _Array;
         }
+
+        public int GetAmountOfItems { get { return this.AmountOfItems; } }
+       
     }
 }

@@ -2,6 +2,8 @@
 using System.Linq;
 using System.Text;
 using System.Xml.Linq;
+using System.Xml;
+using System.IO;
 
 namespace Revento
 {
@@ -10,12 +12,16 @@ namespace Revento
     /// </summary>
 	public class XMLProcesser
     {
+        public static void WriteXML(XDocument xmldocument, string title)
+        {
+          
+        }
+
         public static string[] SendXML(XDocument xmldocument, string attribute)
         {
             Itterator<string> EventList = new ArrayItterator<string>(); 
 
-            //pakt event titles
-            
+            //pakt event bij attrubuut
             var query = from c in xmldocument.Root.Descendants("event")
                         select c.Element(attribute).Value;
 
@@ -24,8 +30,16 @@ namespace Revento
                 EventList.Add(title);
             }
 
-         
-            return EventList.GetCollection();
+            //Delete null values...
+            string[] RetEvents = new string[EventList.GetAmountOfItems];
+            int index = 0;
+            while (index < RetEvents.Length)
+            {
+                RetEvents[index] = EventList.GetNext().Visit<string>((v) => { return v; }, () => { return ""; });
+                index += 1;
+            }
+
+            return RetEvents;
         }
     }
 }
