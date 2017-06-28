@@ -1,36 +1,25 @@
-﻿<resources>
-  <event>
-    <title>Oh ja joh hoezo dan?!</title>
-    <description>
-      Er zijn maar weinig mensen zo vurig en gepassioneerd als de Schiedammers, maar ze lopen er niet mee te koop. Als een buitenstaander de liefde verklaart aan deze stad, is steevast de reactie: ‘Oh ja joh, hoezo dan?’ Maar daar komt de trots van de Schiedammer om de hoek kijken. De glans in de ogen als een buitenstaander vertelt wat zo mooi is aan de stad. De gretigheid waarmee ze door blijven vragen en zelf staan te popelen om hun Schiedamse verhaal te delen. Dit project bestaat uit die verhalen:
+﻿<resources>    
+    <event>
+        <title>Welcome to the Future</title>
+        <date>22 juli 2017</date>
+        <description>United through music, we dance towards the future</description>
+        <address></address>
+        <website></website>
+    </event>
 
-      een voorstelling voor mensen die elkaar anders nooit ontmoet hadden, voor mensen die dol zijn op Schiedamse verhalen en voor mensen die herinneringen en toekomstdromen willen delen. Een waarschuwing vooraf: je blik op Schiedam en Schiedammers zal voorgoed veranderen.
+    <event>
+        <title>Modular Festival 2017</title>
+        <date>1 juli 2017</date>
+        <description>Beschrijving</description>
+        <address></address>
+        <website></website>
+    </event>
 
-    </description>
-  </event>
-
-  <event>
-    <title>Hart voor de zaak</title>
-    <description>Hart voor de zaak hart voor de zaak ik heb helemaal zaak, ik was gewoon een beetje aan het chillen!</description>
-  </event>
-
-  <event>
-    <title>Titel</title>
-    <description>Beschrijving</description>
-  </event>
-
-  <event>
-    <title>Titel</title>
-    <description>Beschrijving</description>
-  </event>
-
-  <event>
-    <title>Titel</title>
-    <description>Beschrijving</description>
-  </event>
-
-  <event>
-    <title>Titel</title>
-    <description>Beschrijving</description>
-  </event>
+    <event>
+        <title>Brandersfeesten 2017</title>
+        <date>22 september 2017</date>
+        <description>Beschrijving</description>
+        <address>3111 Schiedam</address>
+        <website></website>
+    </event>
 </resources>
