@@ -5,10 +5,11 @@ using Android.Content;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using Android.Support.V7.Widget;
 
 namespace Revento.Droid
 {
-	[Activity (Label = "Revento", Theme ="@style/MyTheme", MainLauncher = true, Icon = "@drawable/icon")]
+	[Activity (Label = "Revento", Theme ="@style/MyTheme", MainLauncher = true, Icon = "@drawable/Icon")]
 	public class MainActivity : ListActivity
 	{
         string[] EventTitle, EventDate, EventDescription, EventAddress, EventWebsite;        

@@ -10,18 +10,26 @@
     android:paddingBottom="10dp"
     android:paddingLeft="10dp"
     android:id="@+id/linearLayout1">
-    <android.support.v7.widget.CardView
+
+    <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
         android:layout_width="fill_parent"
-        android:layout_height="150dp"
-        android:layout_gravity="center_horizontal">
+        android:layout_height="90dp"
+        android:layout_gravity="center_horizontal"
+        android:elevation="100dp"                                     
+        card_view:cardCornerRadius="4dp"
+        card_view:cardUseCompatPadding="true">
+
         <TextView
             android:text="Large Text"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center"
+            android:gravity="left"
             android:layout_marginTop="0dp"
-            android:id="@+id/textView3" />
+            android:id="@+id/textView3"
+            android:paddingTop="5dp"
+            android:paddingLeft="5dp" />
+        
         <TextView
             android:text="Small Text"
             android:textAppearance="?android:attr/textAppearanceSmall"
@@ -29,6 +37,8 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:layout_marginTop="50dp"
-            android:id="@+id/textView2" />      
+            android:id="@+id/textView2"
+            android:paddingTop="5dp"
+            android:paddingLeft="5dp" />
     </android.support.v7.widget.CardView>
 </LinearLayout>
