@@ -11,7 +11,6 @@ namespace Revento.Droid
 	[Activity (Label = "Revento", Theme ="@style/MyTheme", MainLauncher = true, Icon = "@drawable/icon")]
 	public class MainActivity : ListActivity
 	{
-
         string[] EventTitle, EventDate, EventDescription, EventAddress, EventWebsite;        
         
         protected override void OnCreate (Bundle bundle)
@@ -33,16 +32,13 @@ namespace Revento.Droid
 		    EventDate = XMLProcesser.SendXML(xdoc, "date");
             EventDescription = XMLProcesser.SendXML(xdoc, "description");
 		    EventAddress = XMLProcesser.SendXML(xdoc, "address");
-		    EventWebsite = XMLProcesser.SendXML(xdoc, "website");
-
-		    // Laat de gebuiker snel kunnen scrollen door de lijst met items
-		    ListView.FastScrollEnabled = true;
+		    EventWebsite = XMLProcesser.SendXML(xdoc, "website");   
 
             // Toon de titel en datum van het evenement in de lijst van het homescreen
             this.ListAdapter = new MainScreenAdapter(EventTitle,EventDate,this);           
         }
 
-        protected override void OnListItemClick(ListView l, View v, int position, long id) {
+        protected override void OnListItemClick(ListView lv, View v, int position, long id) {
             var t = EventTitle[position];
             
             var NextActivity = new Intent(this,typeof(DetailsActivity));
