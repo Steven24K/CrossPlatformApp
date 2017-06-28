@@ -2,7 +2,7 @@
     <event>
         <title>Welcome to the Future</title>
         <date>22 juli 2017</date>
-        <description>United through music, we dance towards the future</description>
+        <description>United through music, we dance towards the future.</description>
         <address>Noorderlaaik 1, 1511 BX Oostzaan</address>
         <website>https://www.facebook.com/events/104257123351976/</website>
     </event>
@@ -10,7 +10,7 @@
     <event>
         <title>Modular Festival 2017</title>
         <date>1 juli 2017</date>
-        <description>Beschrijving</description>
+        <description>Techno, tech-house, en meer.</description>
         <address>Park Maasboulevard 3, 3114 HB Schiedam</address>
         <website>https://www.facebook.com/events/1632069510434097/</website>
     </event>
@@ -18,8 +18,54 @@
     <event>
         <title>Brandersfeesten 2017</title>
         <date>22 september 2017</date>
-        <description>Beschrijving</description>
+        <description>Op 22, 23 en 24 september staat Schiedam bol van de feestelijke activiteiten tijdens de 33e editie van de Brandersfeesten.</description>
         <address>3111 Schiedam</address>
         <website>https://www.facebook.com/events/287761984974533/</website>
+    </event>
+
+    <event>
+        <title>North Sea Round Town</title>
+        <date>2 juni 2017</date>
+        <description>North Sea Round Town is het jaarlijkse Fringe Festival van North Sea Jazz dat met een gratis en afwisselend programma neerstrijkt in Rotterdam van 22 juni t/m 9 juli 2017, met het beste dat Rotterdam te bieden heeft aan jazz. Op tientallen locaties: bij jou in de straat, op onverwachte plekken, pop-up's en grote jazz-podia.</description>
+        <address>Diverse locaties 1, 3013 AL Rotterdam</address>
+        <website>http://www.northsearoundtown.nl</website>
+    </event>
+
+    <event>
+        <title>Schilder 'Zon Zee Strand'</title>
+        <date>27 juni 2017</date>
+        <description>Tijdens dit creatieve avondje uit hoef je alleen maar te genieten! onder het genot van een hapje en een drankje, creëer je zo een mooi schilderij. Laat onzekerheid je niet in de weg zitten: iedereen kán het! je wordt stap voor stap begeleid bij het schilderen van dit kunstwerk. als je wel graag wat eigenheid in je creatie wilt stoppen, dan kan dat natuurlijk ook door o.a. je eigen kleurencombinaties te kiezen.</description>
+        <address>Marconistraat 39, 3029 AG Rotterdam</address>
+        <website>http://www.paintbar.nl/events/zuid-holland.html</website>
+    </event>
+
+    <event>
+        <title>Markant Rotterdam</title>
+        <date>27 juni 2017</date>
+        <description>De rondleiding gaat langs alle belangrijkste bezienswaardigheden van de binnenstad, waaronder het nieuwe CS en de Markthal.</description>
+        <address>Hoogstraat 110, 3011 PV Rotterdam</address>
+        <website>http://www.gilderotterdam.nl/</website>
+    </event>
+
+    <event>
+        <title>Rotterdam Sight running Tours</title>
+        <date>28 juni 2017</date>
+        <description>Hardlopend de stad Rotterdam ontdekken is hét motto van de Rotterdam Sight running Tours.
+
+            Er is keuze uit verschillende 'urban' tours, zoals een rondje 'Rotterdam tijdens en na de 2e Wereld Oorlog', een bruggenrondje of een rondje waarbij je verschillende interessante Rotterdamse hotspots passeert. Ook kun je contact opnemen voor speciale 'custom'- tours. Een bedrijfsuitje, een vrijgezellenfeest, voor elke gelegenheid is een Sight running Tour te organiseren.
+            Het combineren van de liefde voor het lopen met de liefde voor de bruisende stad Rotterdam, zal Rotterdam Sight Running Tours zorgen voor een unieke ervaring.
+            Het maakt niet uit of je het Sightrunning tour, Running Tour, city tour, jogging tour of urban noemt, we willen gewoon u onze mooie stad Rotterdam laten zien hardlopend.
+            Startpunt is het Marathon monument op het Willemsplein.
+        </description>
+        <address></address>
+        <website></website>
+    </event>
+
+    <event>
+        <title></title>
+        <date></date>
+        <description></description>
+        <address></address>
+        <website></website>
     </event>
 </resources>

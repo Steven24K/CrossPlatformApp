@@ -1,13 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-using Android.App;
-using Android.Content;
+﻿using Android.App;
 using Android.OS;
-using Android.Runtime;
-using Android.Views;
 using Android.Widget;
 
 namespace Revento.Droid
@@ -32,10 +24,7 @@ namespace Revento.Droid
             Date.Text = Intent.GetStringExtra("date") ?? "No data..";
             Description.Text = Intent.GetStringExtra("description") ?? "No data...";
             Address.Text = Intent.GetStringExtra("address") ?? "No data..";
-            Website.Text = Intent.GetStringExtra("website") ?? "No data..";
-
-
-            // Create your application here
+            Website.Text = Intent.GetStringExtra("website") ?? "No data..";            
         }
     }
 }
