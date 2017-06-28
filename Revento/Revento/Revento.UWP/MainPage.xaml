@@ -8,6 +8,68 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Rectangle Fill="#FF4F4F4F" HorizontalAlignment="Left" VerticalAlignment="Top" Height="1080" Width="230" />
+        <Image HorizontalAlignment="Left" VerticalAlignment="Top" Height="80" Width="230" Source="img/xamarin_logo_230.png"/>
+
+
+        <Button Content="Evenementen" Click="Evenement_CLick" HorizontalAlignment="Left" Margin="0,80,0,0" VerticalAlignment="Top" Width="230" FontSize="20px" FontWeight="Bold" Foreground="White" Background="#FF4F4F4F" />
+        <Button Content="Favorieten" Click="Favoriet_Click" HorizontalAlignment="Left" Margin="0,119,0,0" VerticalAlignment="Top" Width="230" FontSize="20px" FontWeight="Bold" Foreground="White" Background="#FF4F4F4F"/>
+        <Button Content="BlackList" Click="BlackList_Click" HorizontalAlignment="Left" Margin="0,158,0,0" VerticalAlignment="Top" Width="230" FontSize="20px" FontWeight="Bold" Foreground="White" Background="#FF4F4F4F"/>
+        <Button Click="Contact_Click" HorizontalAlignment="Left" Margin="10,950,0,0" VerticalAlignment="Top" Width="50" FontSize="20px" FontWeight="Bold" Foreground="White" Height="50">
+            <Button.Background>
+                <ImageBrush ImageSource="ms-appx:///img/Contact_Wit.png" Stretch="Fill"/>
+            </Button.Background>
+        </Button>
+
+
+
+        <Rectangle Fill="#9AC2C9" HorizontalAlignment="Left" Margin="230,0,0,0" VerticalAlignment="Top" Height="80" Width="600"/>
+        <TextBlock x:Name="CategorieTitel" HorizontalAlignment="Left" Margin="235,10,0,0" TextWrapping="Wrap" Text="Overzicht Evenementen" VerticalAlignment="Top" FontSize="40px" FontWeight="Bold" Foreground="Black" Width="595" Height="52" />
+
+        <ScrollViewer HorizontalAlignment="Left" Height="1000" Margin="230,80,0,0" VerticalAlignment="Top" Width="600" Background="#FFF9F9F9">
+            <ListView x:Name="ListViewEvenementen" SelectionChanged="EvenementenSelectionChanged" HorizontalAlignment="Left" Height="1080" VerticalAlignment="Top" Width="600" Background="#FFF9F9F9">
+                <x:String>#Swik C63</x:String>
+                <x:String>#Swek E63</x:String>
+                <x:String>#Swak S63</x:String>
+                <ListViewItem Content="ListViewItem"/>
+                <ListViewItem Content="ListViewItem"/>
+                <ListViewItem Content="ListViewItem"/>
+                <ListViewItem Content="ListViewItem"/>
+            </ListView>
+        </ScrollViewer>
+
+        <Rectangle Fill="#8AA1B1" HorizontalAlignment="Left" Height="80" Margin="830,0,0,0" VerticalAlignment="Top" Width="1090"/>
+        <TextBlock x:Name="DetailInformatie" HorizontalAlignment="Left" Margin="835,10,0,0" TextWrapping="Wrap" Text="Details" VerticalAlignment="Top" FontSize="40px" FontWeight="Bold" />
+
+        <Rectangle Fill="#FFF" HorizontalAlignment="Left" Height="1000" Margin="830,80,0,0" VerticalAlignment="Top" Width="1090"/>
+        <TextBlock x:Name="TitleEvenement" HorizontalAlignment="Left" Margin="835,80,0,0" TextWrapping="Wrap" Text="Titel" VerticalAlignment="Top" FontSize="30px" FontWeight="Bold"/>
+        <TextBlock x:Name="TitelEvenement2" HorizontalAlignment="Left" Margin="835,120,0,0" TextWrapping="Wrap" Text="..." VerticalAlignment="Top" FontSize="20px"/>
+        <TextBlock x:Name="PrijsEvenement" HorizontalAlignment="Left" Margin="1325,80,0,0" TextWrapping="Wrap" Text="Prijs" VerticalAlignment="Top" FontSize="30px" FontWeight="Bold"/>
+        <TextBlock x:Name="PrijsEvenement2" HorizontalAlignment="Left" Margin="1325,120,0,0" TextWrapping="Wrap" Text="€..." VerticalAlignment="Top" FontSize="20px"/>
+        <TextBlock x:Name="BeschrijvingEvenement" HorizontalAlignment="Left" Margin="835,160,0,0" TextWrapping="Wrap" Text="Beschrijving" VerticalAlignment="Top" FontSize="30px"/>
+        <TextBlock x:Name="BeschrijvingEvenement2" HorizontalAlignment="Left" Margin="835,200,0,0" TextWrapping="Wrap" Text="..." VerticalAlignment="Top" FontSize="20px" />
+        <TextBlock x:Name="AdresEvenement" HorizontalAlignment="Left" Margin="835,280,0,0" TextWrapping="Wrap" Text="Adres" VerticalAlignment="Top" FontSize="30px" />
+        <TextBlock x:Name="AdresEvenement2" HorizontalAlignment="Left" Margin="835,320,0,0" TextWrapping="Wrap" Text="..." VerticalAlignment="Top" FontSize="20px"/>
+        <TextBlock x:Name="PostcodeEvenement" HorizontalAlignment="Left" Margin="1080,280,0,0" TextWrapping="Wrap" Text="Postcode" VerticalAlignment="Top" FontSize="30px" />
+        <TextBlock x:Name="PostcodeEvenement2" HorizontalAlignment="Left" Margin="1080,320,0,0" TextWrapping="Wrap" Text="..." VerticalAlignment="Top" FontSize="20px"/>
+        <TextBlock x:Name="BDEvenement" HorizontalAlignment="Left" Margin="835,360,0,0" TextWrapping="Wrap" Text="Begindatum" VerticalAlignment="Top" FontSize="30px" />
+        <TextBlock x:Name="BDEvenement2" HorizontalAlignment="Left" Margin="835,400,0,0" TextWrapping="Wrap" Text="..." VerticalAlignment="Top" FontSize="20px"/>
+        <TextBlock x:Name="EDEvenement" HorizontalAlignment="Left" Margin="1080,360,0,0" TextWrapping="Wrap" Text="Einddatum" VerticalAlignment="Top" FontSize="30px" />
+        <TextBlock x:Name="EDEvenement2" HorizontalAlignment="Left" Margin="1080,400,0,0" TextWrapping="Wrap" Text="..." VerticalAlignment="Top" FontSize="20px"/>
+        <TextBlock x:Name="BTEvenement" HorizontalAlignment="Left" Margin="835,440,0,0" TextWrapping="Wrap" Text="Begintijd" VerticalAlignment="Top" FontSize="30px" />
+        <TextBlock x:Name="BTEvenement2" HorizontalAlignment="Left" Margin="835,480,0,0" TextWrapping="Wrap" Text="..." VerticalAlignment="Top" FontSize="20px"/>
+        <TextBlock x:Name="ETEvenement" HorizontalAlignment="Left" Margin="1080,440,0,0" TextWrapping="Wrap" Text="Eindtijd" VerticalAlignment="Top" FontSize="30px" />
+        <TextBlock x:Name="ETEvenement2" HorizontalAlignment="Left" Margin="1080,480,0,0" TextWrapping="Wrap" Text="..." VerticalAlignment="Top" FontSize="20px"/>
+        <TextBlock x:Name="TELvenement" HorizontalAlignment="Left" Margin="835,520,0,0" TextWrapping="Wrap" Text="Telefoon" VerticalAlignment="Top" FontSize="30px"/>
+        <TextBlock x:Name="Telvenement2" HorizontalAlignment="Left" Margin="835,560,0,0" TextWrapping="Wrap" Text="..." VerticalAlignment="Top" FontSize="20px"/>
+        <TextBlock x:Name="WEBvenement" HorizontalAlignment="Left" Margin="1080,520,0,0" TextWrapping="Wrap" Text="Website" VerticalAlignment="Top" FontSize="30px"/>
+        <TextBlock x:Name="WEBvenement2" HorizontalAlignment="Left" Margin="1080,560,0,0" TextWrapping="Wrap" Text="..." VerticalAlignment="Top" FontSize="20px"/>
+        <TextBlock x:Name="EMAILvenement" HorizontalAlignment="Left" Margin="1325,520,0,0" TextWrapping="Wrap" Text="E-mail" VerticalAlignment="Top" FontSize="30px"/>
+        <TextBlock x:Name="EMAILvenement2" HorizontalAlignment="Left" Margin="1325,560,0,0" TextWrapping="Wrap" Text="..." VerticalAlignment="Top" FontSize="20px"/>
+        <TextBlock x:Name="FavorietEvenement" HorizontalAlignment="Left" Margin="835,600,0,0" TextWrapping="Wrap" Text="Favoriet" VerticalAlignment="Top" FontSize="30px" />
+        <ToggleSwitch x:Name="FavorietEvenementToggle" Toggled="Favoriet_Toggled" HorizontalAlignment="Left" Margin="835,640,0,0" VerticalAlignment="Top" FontSize="20px" OnContent="Ja" OffContent="Nee" />
+        <Button Content="Route" Click="Kaart_Click" HorizontalAlignment="Left" Margin="1138,640,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.123,0.5" Height="40" Width="123"/>
+
 
     </Grid>
 </Page>

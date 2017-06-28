@@ -112,12 +112,6 @@
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Game\Game.csproj">
-      <Project>{fd77a22c-c4c0-4297-be43-aef67345e589}</Project>
-      <Name>Game</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <AndroidAsset Include="Assets\events.xml" />
   </ItemGroup>
   <ItemGroup>
