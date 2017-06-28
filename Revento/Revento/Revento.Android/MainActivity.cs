@@ -18,48 +18,47 @@ namespace Revento.Droid
 	public class MainActivity : ListActivity
 	{
 
-        string[] EventList, Description;
+        string[] EventTitle, EventDate, EventDescription, EventAddress, EventWebsite;        
         
         protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
 
-            // Set our view from the "main" layout resource
+            // Open het xml bestand vanuit de assets folder
             Stream xmldoc = Assets.Open("events.xml");
-
-            /// Linq werkt niet bij android, dus push xmldoc naar de shared code dmv een method
-            /// Bewerk xmldoc in de shared code zodat er een string[] uitkomt
-            /// Return de bewerkte xmldoc en voeg deze toe in de items array
 
             // Lees het xml bestand door van voor naar achteren -> je krijgt hierbij de xml tags
             StreamReader reader = new StreamReader(xmldoc);
             string readertext = reader.ReadToEnd();
 
             // Maak van de gelezen xml een XDocument object
-            XDocument xdoc = XDocument.Parse(readertext);
-            //string[] ProcessedXML = XMLProcesser.SendXML(xdoc, "description");
-            List<string> TitleList = new List<string>();
+            XDocument xdoc = XDocument.Parse(readertext);                                    
 
+            // Laat onze XMLProcessor alle informatie uit het xml bestand halen
+            EventTitle = XMLProcesser.SendXML(xdoc, "title");
+		    EventDate = XMLProcesser.SendXML(xdoc, "date");
+            EventDescription = XMLProcesser.SendXML(xdoc, "description");
+		    EventAddress = XMLProcesser.SendXML(xdoc, "address");
+		    EventWebsite = XMLProcesser.SendXML(xdoc, "website");
 
-            ListView.FastScrollEnabled = true;
-            //EventList = new string[] { "De Parade", "Oh ja joh hoezo dan?!", "Hart voor de zaak", "Klein geluk" };
-            EventList = XMLProcesser.SendXML(xdoc, "title"); 
-            Description = XMLProcesser.SendXML(xdoc, "description"); 
-            //Description = new string[] {"Het grootste theater festival van Rotterdam","De gepasioneerde schiedammer" ,"Een tour door schiedam zuid","De schiedamse natuur en zijn verhalen"  };
-            
+		    // Laat de gebuiker snel kunnen scrollen door de lijst met items
+		    ListView.FastScrollEnabled = true;
 
-		    //XMLReader xmlreader = new XMLReader("");
-		    //EventList = xmlreader.RetrieveXML();
-
-            this.ListAdapter = new MainScreenAdapter(EventList,Description,this);
-           
+            // Toon de titel en datum van het evenement in de lijst van het homescreen
+            this.ListAdapter = new MainScreenAdapter(EventTitle,EventDate,this);           
         }
+
         protected override void OnListItemClick(ListView l, View v, int position, long id) {
-            var t = EventList[position];
-            //Android.Widget.Toast.MakeText(this, t, Android.Widget.ToastLength.Short).Show();
+            var t = EventTitle[position];
+            
             var NextActivity = new Intent(this,typeof(DetailsActivity));
-            NextActivity.PutExtra("title", EventList[id]);
-            NextActivity.PutExtra("description", Description[id]);
+
+            // Voeg alle items vanuit het xml bestand toe aan het detailedview activity
+            NextActivity.PutExtra("title", EventTitle[id]);
+            NextActivity.PutExtra("date", EventDate[id]);
+            NextActivity.PutExtra("description", EventDescription[id]);
+            NextActivity.PutExtra("address", EventAddress[id]);
+            NextActivity.PutExtra("website", EventWebsite[id]);
             
             StartActivity(NextActivity);
     }
