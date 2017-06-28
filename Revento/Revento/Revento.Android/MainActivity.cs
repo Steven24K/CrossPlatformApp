@@ -14,7 +14,7 @@ using Android.Support.V7.CardView;
 
 namespace Revento.Droid
 {
-	[Activity (Label = "Revento", MainLauncher = true, Icon = "@drawable/icon")]
+	[Activity (Label = "Revento", Theme ="@style/MyTheme", MainLauncher = true, Icon = "@drawable/icon")]
 	public class MainActivity : ListActivity
 	{
 
