@@ -108,6 +108,8 @@
     <None Include="Revento.UWP_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="img\Contact_Wit.png" />
+    <Content Include="img\xamarin_logo_230.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
