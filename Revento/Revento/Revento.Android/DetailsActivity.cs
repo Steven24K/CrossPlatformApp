@@ -1,5 +1,6 @@
 ﻿using Android.App;
 using Android.OS;
+using Android.Views;
 using Android.Widget;
 
 namespace Revento.Droid
@@ -11,6 +12,10 @@ namespace Revento.Droid
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.Details);
+
+            // Toon een backbutton in de actionbar
+            ActionBar.SetHomeButtonEnabled(true);
+            ActionBar.SetDisplayHomeAsUpEnabled(true);
 
             // Maak textviews aan voor het evenement
             TextView Title = FindViewById<TextView>(Resource.Id.title);
@@ -25,6 +30,20 @@ namespace Revento.Droid
             Description.Text = Intent.GetStringExtra("description") ?? "No data...";
             Address.Text = Intent.GetStringExtra("address") ?? "No data..";
             Website.Text = Intent.GetStringExtra("website") ?? "No data..";            
+        }
+
+        // Override de functionaliteit van de backbutton zodat het teruggaat naar de mainactivity
+        public override bool OnOptionsItemSelected(IMenuItem item)
+        {
+            switch (item.ItemId)
+            {
+                case Android.Resource.Id.Home:
+                    Finish();
+                    return true;
+
+                default:
+                    return base.OnOptionsItemSelected(item);
+            }
         }
     }
 }
