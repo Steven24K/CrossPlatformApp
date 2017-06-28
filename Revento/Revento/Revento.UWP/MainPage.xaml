@@ -50,11 +50,11 @@
         <TextBlock x:Name="AdresEvenement2" HorizontalAlignment="Left" Margin="835,458,0,0" TextWrapping="Wrap" Text="..." VerticalAlignment="Top" FontSize="20px"/>
         <TextBlock x:Name="DatumEvenement" HorizontalAlignment="Left" Margin="830,513,0,0" TextWrapping="Wrap" Text="Datum" VerticalAlignment="Top" FontSize="30px" />
         <TextBlock x:Name="DatumEvenement2" HorizontalAlignment="Left" Margin="835,558,0,0" TextWrapping="Wrap" Text="..." VerticalAlignment="Top" FontSize="20px"/>
-        <TextBlock x:Name="WEBvenement" HorizontalAlignment="Left" Margin="835,638,0,0" TextWrapping="Wrap" Text="Website" VerticalAlignment="Top" FontSize="30px" RenderTransformOrigin="-1.83,-0.95"/>
-        <TextBlock x:Name="WEBvenement2" HorizontalAlignment="Left" Margin="835,683,0,0" TextWrapping="Wrap" Text="..." VerticalAlignment="Top" FontSize="20px"/>
+        <TextBlock x:Name="WEBvenement" HorizontalAlignment="Left" Margin="835,628,0,0" TextWrapping="Wrap" Text="Website" VerticalAlignment="Top" FontSize="30px" RenderTransformOrigin="-1.83,-0.95"/>
         <TextBlock x:Name="FavorietEvenement" HorizontalAlignment="Left" Margin="835,735,0,0" TextWrapping="Wrap" Text="Favoriet" VerticalAlignment="Top" FontSize="30px" />
         <ToggleSwitch x:Name="FavorietEvenementToggle" Toggled="Favoriet_Toggled" HorizontalAlignment="Left" Margin="835,780,0,0" VerticalAlignment="Top" FontSize="20px" OnContent="Ja" OffContent="Nee" />
         <Button Content="Route" Click="Kaart_Click" HorizontalAlignment="Left" Margin="1364,780,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.123,0.5" Height="40" Width="123"/>
+        <HyperlinkButton Content="Open website van evenement" HorizontalAlignment="Left" Margin="830,668,0,0" VerticalAlignment="Top" NavigateUri="https://www.facebook.com/events/104257123351976/" Height="47" Width="273" FontSize="20"/>
 
 
     </Grid>
