@@ -14,7 +14,7 @@ namespace Revento
     {
         public static void WriteXML(XDocument xmldocument, string title)
         {
-          
+            
         }
 
         public static string[] SendXML(XDocument xmldocument, string attribute)

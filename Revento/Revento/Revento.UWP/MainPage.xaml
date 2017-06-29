@@ -21,8 +21,6 @@
             </Button.Background>
         </Button>
 
-
-
         <Rectangle Fill="#FF4CAF50" HorizontalAlignment="Left" Margin="230,0,0,0" VerticalAlignment="Top" Height="80" Width="600"/>
         <TextBlock x:Name="CategorieTitel" HorizontalAlignment="Left" Margin="235,10,0,0" TextWrapping="Wrap" Text="Overzicht Evenementen" VerticalAlignment="Top" FontSize="40px" FontWeight="Bold" Foreground="White" Width="595" Height="52" />
 
