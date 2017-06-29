@@ -2102,6 +2102,15 @@ namespace Revento.Droid
 			// aapt resource value: 0x7f06007c
 			public const int media_actions = 2131099772;
 			
+			// aapt resource value: 0x7f060087
+			public const int menu_BlackList = 2131099783;
+			
+			// aapt resource value: 0x7f060086
+			public const int menu_Favorieten = 2131099782;
+			
+			// aapt resource value: 0x7f060088
+			public const int menu_contact = 2131099784;
+			
 			// aapt resource value: 0x7f06001d
 			public const int middle = 2131099677;
 			
@@ -2500,6 +2509,22 @@ namespace Revento.Droid
 			}
 			
 			private Layout()
+			{
+			}
+		}
+		
+		public partial class Menu
+		{
+			
+			// aapt resource value: 0x7f0c0000
+			public const int top_menus = 2131492864;
+			
+			static Menu()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Menu()
 			{
 			}
 		}

@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Xml.Linq;
 using Windows.ApplicationModel.Email;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
@@ -28,7 +29,6 @@ namespace Revento.UWP
         public MainPage()
         {
             this.InitializeComponent();
-
             //Initialize the ToggleSwitch for roaming settings
             if (ApplicationData.Current.RoamingSettings.Values.ContainsKey("FavorietEvenementToggle"))
                 FavorietEvenementToggle.IsOn = (bool)ApplicationData.Current.RoamingSettings.Values["FavorietEvenementToggle"];
@@ -101,8 +101,5 @@ namespace Revento.UWP
             var success = await Windows.System.Launcher.LaunchUriAsync(uriSchool, launcherOptions);
 
         }
-
-
-
     }
 }

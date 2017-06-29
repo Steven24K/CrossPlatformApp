@@ -115,12 +115,17 @@
     <AndroidAsset Include="Assets\events.xml" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\values\colors.xml" />
+    <AndroidResource Include="Resources\values\colors.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\values-v21\styles.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\menu\top_menus.xml" />
   </ItemGroup>
   <Import Project="..\Revento\Revento.projitems" Label="Shared" Condition="Exists('..\Revento\Revento.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />

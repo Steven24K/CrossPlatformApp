@@ -54,6 +54,21 @@ namespace Revento.Droid
             StartActivity(NextActivity);
     }
 
+        //Laat 3 dots menu zien
+        public override bool OnCreateOptionsMenu(IMenu menu)
+        {
+            MenuInflater.Inflate(Resource.Menu.top_menus, menu);
+            return base.OnCreateOptionsMenu(menu);
+        }
+
+        //Laat zien welk item geklikt is
+        public override bool OnOptionsItemSelected(IMenuItem item)
+        {
+            Toast.MakeText(this, "Action selected: " + item.TitleFormatted,
+                ToastLength.Short).Show();
+            return base.OnOptionsItemSelected(item);
+        }
+
     }
 }
 
