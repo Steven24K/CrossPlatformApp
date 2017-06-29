@@ -18,23 +18,21 @@ namespace Revento.UWP
 
     public class Event
     {
-        public string[] EventTitle;
+        private XDocument xdoc;
 
         public XDocument LoadXML(string filepath)
         {
-            XDocument xdoc = XDocument.Load(filepath);
+            this.xdoc = XDocument.Load(filepath);
 
             return xdoc;
         }
 
-        public string[] ParseXML(XDocument xdoc)
+        public string[] ParseXML(string attribute)
         {
-            EventTitle = XMLProcesser.SendXML(xdoc, "title");
+            string[] _event = XMLProcesser.SendXML(xdoc, attribute);
 
-            Debug.Write("hoi");
-
-            return EventTitle;
-        }        
+            return _event;
+        }
     }
 
     public sealed partial class MainPage : Page
@@ -46,7 +44,11 @@ namespace Revento.UWP
             Event evenement = new Event();
             XDocument loadedfile = evenement.LoadXML(XMLfile);
 
-            string[] titles = evenement.ParseXML(loadedfile);
+            string[] titles = evenement.ParseXML("title");
+            string[] date = evenement.ParseXML("date");
+            string[] description = evenement.ParseXML("description");
+            string[] website = evenement.ParseXML("website");
+            string[] address = evenement.ParseXML("address");
 
             this.InitializeComponent();
 
