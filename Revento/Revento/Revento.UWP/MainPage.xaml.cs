@@ -115,12 +115,12 @@ namespace Revento.UWP
         private async void Kaart_Click(object sender, RoutedEventArgs e)
         {
             // Locaties
-            var uriSchool = new Uri("bingmaps:?where=1, Lupine, Hoogvliet");
+            var uriLocation = new Uri("bingmaps:?where=1, Lupine, Hoogvliet");
 
             // Launch the Windows Maps app
             var launcherOptions = new Windows.System.LauncherOptions();
             launcherOptions.TargetApplicationPackageFamilyName = "Microsoft.WindowsMaps_8wekyb3d8bbwe";
-            var success = await Windows.System.Launcher.LaunchUriAsync(uriSchool, launcherOptions);
+            var success = await Windows.System.Launcher.LaunchUriAsync(uriLocation, launcherOptions);
 
         }
     }
