@@ -46,9 +46,12 @@ namespace Revento.UWP
             Event evenement = new Event();
             XDocument loadedfile = evenement.LoadXML(XMLfile);
 
-            evenement.ParseXML(loadedfile);
+            string[] titles = evenement.ParseXML(loadedfile);
 
             this.InitializeComponent();
+
+            ListViewEvenementen.ItemsSource = titles;
+
             //Initialize the ToggleSwitch for roaming settings
             if (ApplicationData.Current.RoamingSettings.Values.ContainsKey("FavorietEvenementToggle"))
                 FavorietEvenementToggle.IsOn = (bool)ApplicationData.Current.RoamingSettings.Values["FavorietEvenementToggle"];

@@ -26,13 +26,7 @@
 
         <ScrollViewer HorizontalAlignment="Left" Height="1000" Margin="230,80,0,0" VerticalAlignment="Top" Width="600" Background="#FFF9F9F9">
             <ListView x:Name="ListViewEvenementen" SelectionChanged="EvenementenSelectionChanged" HorizontalAlignment="Left" Height="1080" VerticalAlignment="Top" Width="600" Background="#FFF9F9F9">
-                <x:String>#Swik C63</x:String>
-                <x:String>#Swek E63</x:String>
-                <x:String>#Swak S63</x:String>
-                <ListViewItem Content="ListViewItem"/>
-                <ListViewItem Content="ListViewItem"/>
-                <ListViewItem Content="ListViewItem"/>
-                <ListViewItem Content="ListViewItem"/>
+                
             </ListView>
         </ScrollViewer>
 
