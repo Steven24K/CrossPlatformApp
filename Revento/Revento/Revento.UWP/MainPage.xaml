@@ -36,17 +36,17 @@
         <Rectangle Fill="#FFF" HorizontalAlignment="Left" Height="1000" Margin="830,80,0,0" VerticalAlignment="Top" Width="1090"/>
         <!--<TextBlock x:Name="TitleEvenement" HorizontalAlignment="Left" Margin="835,80,0,0" TextWrapping="Wrap" Text="Titel" VerticalAlignment="Top" FontSize="30px" FontWeight="Bold"/>-->
         <TextBlock x:Name="TitelEvenement2" HorizontalAlignment="Left" Margin="835,111,0,0" TextWrapping="Wrap" Text="..." VerticalAlignment="Top" FontSize="35px" RenderTransformOrigin="0.565,-0.213"/>
-        <TextBlock x:Name="BeschrijvingEvenement" HorizontalAlignment="Left" Margin="835,200,0,0" TextWrapping="Wrap" Text="Beschrijving" VerticalAlignment="Top" FontSize="30px"/>
-        <TextBlock x:Name="BeschrijvingEvenement2" HorizontalAlignment="Left" Margin="835,245,0,0" TextWrapping="Wrap" Text="..." VerticalAlignment="Top" FontSize="20px" />
-        <TextBlock x:Name="AdresEvenement" HorizontalAlignment="Left" Margin="835,413,0,0" TextWrapping="Wrap" Text="Adres" VerticalAlignment="Top" FontSize="30px" />
-        <TextBlock x:Name="AdresEvenement2" HorizontalAlignment="Left" Margin="835,458,0,0" TextWrapping="Wrap" Text="..." VerticalAlignment="Top" FontSize="20px"/>
-        <TextBlock x:Name="DatumEvenement" HorizontalAlignment="Left" Margin="830,513,0,0" TextWrapping="Wrap" Text="Datum" VerticalAlignment="Top" FontSize="30px" />
-        <TextBlock x:Name="DatumEvenement2" HorizontalAlignment="Left" Margin="835,558,0,0" TextWrapping="Wrap" Text="..." VerticalAlignment="Top" FontSize="20px"/>
-        <TextBlock x:Name="WEBvenement" HorizontalAlignment="Left" Margin="835,628,0,0" TextWrapping="Wrap" Text="Website" VerticalAlignment="Top" FontSize="30px" RenderTransformOrigin="-1.83,-0.95"/>
+        
         <TextBlock x:Name="FavorietEvenement" HorizontalAlignment="Left" Margin="835,735,0,0" TextWrapping="Wrap" Text="Favoriet" VerticalAlignment="Top" FontSize="30px" />
         <ToggleSwitch x:Name="FavorietEvenementToggle" Toggled="Favoriet_Toggled" HorizontalAlignment="Left" Margin="835,780,0,0" VerticalAlignment="Top" FontSize="20px" OnContent="Ja" OffContent="Nee" />
         <Button Content="Route" Click="Kaart_Click" HorizontalAlignment="Left" Margin="1364,780,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.123,0.5" Height="40" Width="123"/>
-        <HyperlinkButton Content="Open website van evenement" HorizontalAlignment="Left" Margin="830,668,0,0" VerticalAlignment="Top" NavigateUri="https://www.facebook.com/events/104257123351976/" Height="47" Width="273" FontSize="20"/>
+        <ListView x:Name="ListViewDetail" Background="Transparent" HorizontalAlignment="Left" Height="484" Margin="839,216,0,0" VerticalAlignment="Top" Width="616" IsItemClickEnabled="False" SelectedItem="false">
+            <ListViewItem Content="ListViewItem"/>
+            <ListViewItem Content="ListViewItem"/>
+            <ListViewItem Content="ListViewItem"/>
+            <ListViewItem Content="ListViewItem"/>
+        </ListView>
+
 
 
     </Grid>

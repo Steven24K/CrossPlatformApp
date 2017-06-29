@@ -51,6 +51,8 @@ namespace Revento.UWP
             this.InitializeComponent();
 
             ListViewEvenementen.ItemsSource = titles;
+            ListViewDetail.IsEnabled = false;
+
 
             //Initialize the ToggleSwitch for roaming settings
             if (ApplicationData.Current.RoamingSettings.Values.ContainsKey("FavorietEvenementToggle"))
