@@ -10,7 +10,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content" />
     <EditText
-        android:id="@+id/ContactEditText"
+        android:id="@+id/EventTitle"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="15dp" />
@@ -31,7 +31,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content" />
     <EditText
-        android:id="@+id/ContactEditText"
+        android:id="@+id/EventDescription"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="15dp" />
@@ -41,7 +41,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content" />
     <EditText
-        android:id="@+id/ContactEditText"
+        android:id="@+id/EventAddress"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="15dp" />
@@ -51,7 +51,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content" />
     <EditText
-        android:id="@+id/ContactEditText"
+        android:id="@+id/EventWebsite"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content" />
     <Button
