@@ -5,14 +5,13 @@ using Android.Content;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
-using Android.Support.V7.Widget;
 
 namespace Revento.Droid
 {
 	[Activity (Label = "Revento", Theme ="@style/MyTheme", MainLauncher = true, Icon = "@drawable/Icon")]
 	public class MainActivity : ListActivity
 	{
-        string[] EventTitle, EventDate, EventDescription, EventAddress, EventWebsite;        
+        string[] EventTitle, EventDate, EventDescription, EventAddress, EventWebsite;
         
         protected override void OnCreate (Bundle bundle)
 		{
@@ -58,16 +57,34 @@ namespace Revento.Droid
         public override bool OnCreateOptionsMenu(IMenu menu)
         {
             MenuInflater.Inflate(Resource.Menu.top_menus, menu);
+
             return base.OnCreateOptionsMenu(menu);
         }
 
         //Laat zien welk item geklikt is
         public override bool OnOptionsItemSelected(IMenuItem item)
         {
+            string clickedItem = item.TitleFormatted.ToString();
+
+            OpenActivity(clickedItem);
+
             Toast.MakeText(this, "Action selected: " + item.TitleFormatted,
                 ToastLength.Short).Show();
             return base.OnOptionsItemSelected(item);
         }
+
+	    public void OpenActivity(string _activity)
+	    {
+	        var NextActivity = new Intent(this, typeof(MainActivity));
+
+	        if (_activity == "Contact")
+	            NextActivity = new Intent(this, typeof(ContactForm));
+            else if (_activity == "Favorieten")
+                NextActivity = new Intent(this, typeof(MainActivity));
+
+            
+            StartActivity(NextActivity);
+	    }
 
     }
 }
