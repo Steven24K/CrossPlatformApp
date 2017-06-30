@@ -5,10 +5,6 @@
        android:showAsAction="never"
        android:title="Favorieten" />
   <item
-       android:id="@+id/menu_BlackList"
-       android:showAsAction="never"
-       android:title="BlackList" />
-  <item
        android:id="@+id/menu_contact"
        android:showAsAction="never"
        android:title="Contact" />

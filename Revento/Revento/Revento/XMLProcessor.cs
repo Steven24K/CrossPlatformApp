@@ -12,11 +12,6 @@ namespace Revento
     /// </summary>
 	public class XMLProcesser
     {
-        public static void WriteXML(XDocument xmldocument, string title)
-        {
-            
-        }
-
         public static string[] SendXML(XDocument xmldocument, string attribute)
         {
             Itterator<string> EventList = new ArrayItterator<string>(); 
