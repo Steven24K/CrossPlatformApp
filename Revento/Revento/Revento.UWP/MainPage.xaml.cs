@@ -17,6 +17,11 @@ namespace Revento.UWP
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
 
+    public class ListViewDataItem : ListViewItem
+    {
+        
+    } 
+
     public class Event
     {
         private XDocument xdoc;
@@ -39,6 +44,7 @@ namespace Revento.UWP
     public sealed partial class MainPage : Page
     {
         public string[] titles, date, description, website, address;
+        public int index;
 
         public MainPage()
         {
@@ -57,6 +63,7 @@ namespace Revento.UWP
 
             ListViewEvenementen.ItemsSource = titles;
 
+            
             //Initialize the ToggleSwitch for roaming settings
             if (ApplicationData.Current.RoamingSettings.Values.ContainsKey("FavorietEvenementToggle"))
                 FavorietEvenementToggle.IsOn = (bool)ApplicationData.Current.RoamingSettings.Values["FavorietEvenementToggle"];
@@ -93,17 +100,14 @@ namespace Revento.UWP
 
         private void EvenementenSelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            
-            Random random = new Random();
-            int i = 7;
-            
+            var id = ListViewEvenementen.SelectedIndex;
             
             //Debug.WriteLine("Selected: {0}", e.AddedItems[i]);
-            TitelEvenement2.Text = titles[i];
-            DatumEvenement.Text = date[i];
-            BeschrijvingEvenement.Text = description[i];
-            AdresEvenement.Text = address[i];
-            WebsiteEvenement.Text = website[i];
+            TitelEvenement2.Text = titles[id];
+            DatumEvenement.Text = date[id];
+            BeschrijvingEvenement.Text = description[id];
+            AdresEvenement.Text = address[id];
+            WebsiteEvenement.Text = website[id];
         }
 
         private void Favoriet_Toggled(object sender, RoutedEventArgs e)
