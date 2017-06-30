@@ -24,6 +24,7 @@
         android:text="Selecteer datum"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:theme="@style/MyButton"
         android:layout_marginBottom="15dp" />
     <TextView
         android:id="@+id/ContactTextView"
@@ -58,5 +59,6 @@
         android:id="@+id/submit"
         android:text="Verstuur"
         android:layout_width="fill_parent"
+        android:theme="@style/MyButton"
         android:layout_height="wrap_content" />
 </LinearLayout>

@@ -6,4 +6,8 @@
     <color name="colorCardText">#ccc</color>
     <color name="green">#4CAF50</color>
     <color name="dark_green">#388E3C</color>
+<<<<<<< HEAD
+    <color name="white">#ffffff</color>
+=======
+>>>>>>> origin/master
 </resources>
