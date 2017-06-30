@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="15dp" />
     <TextView
-        android:id="@+id/ContactTextView"
+        android:id="@+id/date_display"
         android:text="Datum van het evenement"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content" />
