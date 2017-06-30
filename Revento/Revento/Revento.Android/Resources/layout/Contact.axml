@@ -2,6 +2,61 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
+    android:layout_height="match_parent"
+    android:padding="15dp">
+    <TextView
+        android:id="@+id/ContactTextView"
+        android:text="Naam van het evenement"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:id="@+id/ContactEditText"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp" />
+    <TextView
+        android:id="@+id/ContactTextView"
+        android:text="Datum van het evenement"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/date_button"
+        android:text="Selecteer datum"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp" />
+    <TextView
+        android:id="@+id/ContactTextView"
+        android:text="Beschrijving van het evenement"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:id="@+id/ContactEditText"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp" />
+    <TextView
+        android:id="@+id/ContactTextView"
+        android:text="Adres van het evenement"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:id="@+id/ContactEditText"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp" />
+    <TextView
+        android:id="@+id/ContactTextView"
+        android:text="Website van het evenement"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:id="@+id/ContactEditText"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/submit"
+        android:text="Verstuur"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
 </LinearLayout>
