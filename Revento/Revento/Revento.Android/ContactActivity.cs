@@ -21,6 +21,7 @@ namespace Revento.Droid
 
             // Zoek onze items om een evenement te submitten
             _eventTitle = FindViewById<EditText>(Resource.Id.EventTitle);
+            _dateDisplay = FindViewById<TextView>(Resource.Id.date_display);
             _eventDescription = FindViewById<EditText>(Resource.Id.EventDescription);
             _eventAddress = FindViewById<EditText>(Resource.Id.EventAddress);
             _eventWebsite = FindViewById<EditText>(Resource.Id.EventWebsite);
@@ -28,22 +29,36 @@ namespace Revento.Droid
             /// <summary>
             /// Dit is om onze datum te selecteren
             /// </summary>
-            _dateDisplay = FindViewById<TextView>(Resource.Id.date_display);
+         
             _dateSelect = FindViewById<Button>(Resource.Id.date_button);
             _dateSelect.Click += DateSelect_OnClick;
 
             _submit = FindViewById<Button>(Resource.Id.submit);
-
+            _submit.Click += SubmitButonOnclick;
+            
             // Toon een backbutton in de actionbar
             ActionBar.SetHomeButtonEnabled(true);
             ActionBar.SetDisplayHomeAsUpEnabled(true);
         }
 
-        public void DateSelect_OnClick(object sender, EventArgs eventArgs)
+        private void DateSelect_OnClick(object sender, EventArgs eventArgs)
         {
             DatePickerFragment frag = DatePickerFragment.NewInstance(delegate(DateTime time) { _dateDisplay.Text = time.ToLongDateString(); });
 
             frag.Show(FragmentManager, DatePickerFragment.TAG);
+        }
+
+        private void SubmitButonOnclick(object sender, EventArgs e)
+        {
+            if (_eventTitle.Text.Length > 0 && _dateDisplay.Text.Length > 0 && _eventDescription.Text.Length > 0 && _eventAddress.Text.Length > 0 && _eventWebsite.Text.Length > 0)
+            {
+                XmlWriter.AddEvent(this, "events.xml", _eventTitle.Text, _dateDisplay.Text, _eventDescription.Text, _eventAddress.Text, _eventWebsite.Text);
+            
+            }
+            else
+            {
+                Toast.MakeText(this, "Please fill in all fields", ToastLength.Short).Show();
+            }
         }
 
         // Override de functionaliteit van de backbutton zodat het teruggaat naar de mainactivity

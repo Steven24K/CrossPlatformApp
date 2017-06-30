@@ -68,8 +68,8 @@ namespace Revento.Droid
 
             OpenActivity(clickedItem);
 
-            Toast.MakeText(this, "Action selected: " + item.TitleFormatted,
-                ToastLength.Short).Show();
+           // Toast.MakeText(this, "Action selected: " + item.TitleFormatted, ToastLength.Short).Show();
+
             return base.OnOptionsItemSelected(item);
         }
 
