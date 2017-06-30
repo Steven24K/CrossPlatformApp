@@ -117,6 +117,9 @@
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
+    <AndroidAsset Include="Assets\events.xml">
+      <SubType>Designer</SubType>
+    </AndroidAsset>
     <None Include="Assets\events.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
