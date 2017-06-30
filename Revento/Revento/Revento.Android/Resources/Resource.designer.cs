@@ -1022,32 +1022,32 @@ namespace Revento.Droid
 		public partial class Color
 		{
 			
-			// aapt resource value: 0x7f08004c
-			public const int abc_background_cache_hint_selector_material_dark = 2131230796;
-			
-			// aapt resource value: 0x7f08004d
-			public const int abc_background_cache_hint_selector_material_light = 2131230797;
-			
 			// aapt resource value: 0x7f08004e
-			public const int abc_color_highlight_material = 2131230798;
+			public const int abc_background_cache_hint_selector_material_dark = 2131230798;
+			
+			// aapt resource value: 0x7f08004f
+			public const int abc_background_cache_hint_selector_material_light = 2131230799;
+			
+			// aapt resource value: 0x7f080050
+			public const int abc_color_highlight_material = 2131230800;
 			
 			// aapt resource value: 0x7f080004
 			public const int abc_input_method_navigation_guard = 2131230724;
 			
-			// aapt resource value: 0x7f08004f
-			public const int abc_primary_text_disable_only_material_dark = 2131230799;
-			
-			// aapt resource value: 0x7f080050
-			public const int abc_primary_text_disable_only_material_light = 2131230800;
-			
 			// aapt resource value: 0x7f080051
-			public const int abc_primary_text_material_dark = 2131230801;
+			public const int abc_primary_text_disable_only_material_dark = 2131230801;
 			
 			// aapt resource value: 0x7f080052
-			public const int abc_primary_text_material_light = 2131230802;
+			public const int abc_primary_text_disable_only_material_light = 2131230802;
 			
 			// aapt resource value: 0x7f080053
-			public const int abc_search_url_text = 2131230803;
+			public const int abc_primary_text_material_dark = 2131230803;
+			
+			// aapt resource value: 0x7f080054
+			public const int abc_primary_text_material_light = 2131230804;
+			
+			// aapt resource value: 0x7f080055
+			public const int abc_search_url_text = 2131230805;
 			
 			// aapt resource value: 0x7f080005
 			public const int abc_search_url_text_normal = 2131230725;
@@ -1058,11 +1058,11 @@ namespace Revento.Droid
 			// aapt resource value: 0x7f080007
 			public const int abc_search_url_text_selected = 2131230727;
 			
-			// aapt resource value: 0x7f080054
-			public const int abc_secondary_text_material_dark = 2131230804;
+			// aapt resource value: 0x7f080056
+			public const int abc_secondary_text_material_dark = 2131230806;
 			
-			// aapt resource value: 0x7f080055
-			public const int abc_secondary_text_material_light = 2131230805;
+			// aapt resource value: 0x7f080057
+			public const int abc_secondary_text_material_light = 2131230807;
 			
 			// aapt resource value: 0x7f080008
 			public const int accent_material_dark = 2131230728;
@@ -1130,6 +1130,9 @@ namespace Revento.Droid
 			// aapt resource value: 0x7f080049
 			public const int colorPrimaryDark = 2131230793;
 			
+			// aapt resource value: 0x7f08004d
+			public const int dark_green = 2131230797;
+			
 			// aapt resource value: 0x7f08003e
 			public const int design_fab_shadow_end_color = 2131230782;
 			
@@ -1177,6 +1180,9 @@ namespace Revento.Droid
 			
 			// aapt resource value: 0x7f08001b
 			public const int foreground_material_light = 2131230747;
+			
+			// aapt resource value: 0x7f08004c
+			public const int green = 2131230796;
 			
 			// aapt resource value: 0x7f08001c
 			public const int highlighted_text_material_dark = 2131230748;
@@ -1274,11 +1280,11 @@ namespace Revento.Droid
 			// aapt resource value: 0x7f08003b
 			public const int switch_thumb_disabled_material_light = 2131230779;
 			
-			// aapt resource value: 0x7f080056
-			public const int switch_thumb_material_dark = 2131230806;
+			// aapt resource value: 0x7f080058
+			public const int switch_thumb_material_dark = 2131230808;
 			
-			// aapt resource value: 0x7f080057
-			public const int switch_thumb_material_light = 2131230807;
+			// aapt resource value: 0x7f080059
+			public const int switch_thumb_material_light = 2131230809;
 			
 			// aapt resource value: 0x7f08003c
 			public const int switch_thumb_normal_material_dark = 2131230780;
@@ -3102,6 +3108,9 @@ namespace Revento.Droid
 			
 			// aapt resource value: 0x7f070003
 			public const int CardView_Light = 2131165187;
+			
+			// aapt resource value: 0x7f07015c
+			public const int MyButton = 2131165532;
 			
 			// aapt resource value: 0x7f07015b
 			public const int MyTheme = 2131165531;

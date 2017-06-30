@@ -48,6 +48,8 @@
     <Button
         android:text="Routebeschrijving"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"      
-        android:id="@+id/button1" />
+        android:layout_height="wrap_content" 
+        android:textColor="#fff"
+        android:id="@+id/button1"
+        android:theme="@style/MyButton"/>
 </LinearLayout>
