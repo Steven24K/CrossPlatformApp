@@ -78,10 +78,19 @@ namespace Revento.Droid
         {
             var NextActivity = new Intent(this, typeof(MainActivity));
 
-            if (_activity == "Contact")
-                NextActivity = new Intent(this, typeof(ContactForm));
-            else if (_activity == "Favorieten")
-                NextActivity = new Intent(this, typeof(MainActivity));
+            switch (_activity)
+            {
+                case "Contact":
+                    NextActivity = new Intent(this, typeof(ContactForm));
+                    break;
+                case "Favorieten":
+                    NextActivity = new Intent(this, typeof(MainActivity));
+                    break;
+
+                default:
+                    NextActivity = new Intent(this, typeof(MainActivity));
+                    break;
+            }
 
 
             StartActivity(NextActivity);
