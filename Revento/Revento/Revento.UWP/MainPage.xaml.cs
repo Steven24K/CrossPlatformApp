@@ -107,7 +107,10 @@ namespace Revento.UWP
             DatumEvenement.Text = date[id];
             BeschrijvingEvenement.Text = description[id];
             AdresEvenement.Text = address[id];
-            WebsiteEvenement.Text = website[id];
+            WebsiteEvenement2.Content = website[id];
+            Uri uri = new Uri(website[id]);
+            WebsiteEvenement2.NavigateUri = uri;
+            
         }
 
         private void Favoriet_Toggled(object sender, RoutedEventArgs e)
