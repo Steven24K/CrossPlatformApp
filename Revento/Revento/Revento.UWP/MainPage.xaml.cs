@@ -45,6 +45,7 @@ namespace Revento.UWP
     {
         public string[] titles, date, description, website, address;
         public int index;
+        public string adres;
 
         public MainPage()
         {
@@ -110,7 +111,7 @@ namespace Revento.UWP
             WebsiteEvenement2.Content = website[id];
             Uri uri = new Uri(website[id]);
             WebsiteEvenement2.NavigateUri = uri;
-            Uri locatie = new Uri(address[id]);
+            adres = address[id];
             
             
         }
@@ -143,8 +144,9 @@ namespace Revento.UWP
 
         private async void Kaart_Click(object sender, RoutedEventArgs e)
         {
+
             // Locaties
-            var uriLocation = new Uri("bingmaps:?where=1, Lupine, Hoogvliet");
+            var uriLocation = new Uri("bingmaps:?where=" + adres);
 
             // Launch the Windows Maps app
             var launcherOptions = new Windows.System.LauncherOptions();
