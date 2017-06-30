@@ -110,6 +110,8 @@ namespace Revento.UWP
             WebsiteEvenement2.Content = website[id];
             Uri uri = new Uri(website[id]);
             WebsiteEvenement2.NavigateUri = uri;
+            Uri locatie = new Uri(address[id]);
+            
             
         }
 
