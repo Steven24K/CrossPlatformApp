@@ -13,7 +13,7 @@ namespace Revento.Droid
 	public class MainActivity : ListActivity
 	{
         string[] EventTitle, EventDate, EventDescription, EventAddress, EventWebsite;        
-        
+
         protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
@@ -36,7 +36,9 @@ namespace Revento.Droid
 		    EventWebsite = XMLProcesser.SendXML(xdoc, "website");   
 
             // Toon de titel en datum van het evenement in de lijst van het homescreen
-            this.ListAdapter = new MainScreenAdapter(EventTitle,EventDate,this);           
+            this.ListAdapter = new MainScreenAdapter(EventTitle,EventDate,this);  
+            
+            
         }
 
         protected override void OnListItemClick(ListView lv, View v, int position, long id) {
@@ -52,7 +54,7 @@ namespace Revento.Droid
             NextActivity.PutExtra("website", EventWebsite[id]);
             
             StartActivity(NextActivity);
-    }
+        }        
 
         //Laat 3 dots menu zien
         public override bool OnCreateOptionsMenu(IMenu menu)
