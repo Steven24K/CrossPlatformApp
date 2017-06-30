@@ -26,7 +26,7 @@
 
         <ScrollViewer HorizontalAlignment="Left" Height="1000" Margin="230,80,0,0" VerticalAlignment="Top" Width="600" Background="#FFF9F9F9">
             <ListView x:Name="ListViewEvenementen" SelectionChanged="EvenementenSelectionChanged" HorizontalAlignment="Left" Height="1080" VerticalAlignment="Top" Width="600" Background="#FFF9F9F9">
-                
+
             </ListView>
         </ScrollViewer>
 
@@ -35,19 +35,13 @@
 
         <Rectangle Fill="#FFF" HorizontalAlignment="Left" Height="1000" Margin="830,80,0,0" VerticalAlignment="Top" Width="1090"/>
         <!--<TextBlock x:Name="TitleEvenement" HorizontalAlignment="Left" Margin="835,80,0,0" TextWrapping="Wrap" Text="Titel" VerticalAlignment="Top" FontSize="30px" FontWeight="Bold"/>-->
-        <TextBlock x:Name="TitelEvenement2" HorizontalAlignment="Left" Margin="835,111,0,0" TextWrapping="Wrap" Text="..." VerticalAlignment="Top" FontSize="35px" RenderTransformOrigin="0.565,-0.213"/>
-        
+        <TextBlock x:Name="TitelEvenement2" HorizontalAlignment="Left" Margin="835,100,0,0" TextWrapping="Wrap" Text="..." VerticalAlignment="Top" FontSize="35px"/>
+        <TextBlock x:Name="DatumEvenement" HorizontalAlignment="Left" Margin="835,180,0,0" TextWrapping="Wrap" Text="..." VerticalAlignment="Top" FontSize="35px"/>
+        <TextBlock x:Name="BeschrijvingEvenement" HorizontalAlignment="Left" Margin="835,260,0,0" TextWrapping="Wrap" Text="..." VerticalAlignment="Top" FontSize="35px"/>
+        <TextBlock x:Name="AdresEvenement" HorizontalAlignment="Left" Margin="835,340,0,0" TextWrapping="Wrap" Text="..." VerticalAlignment="Top" FontSize="35px"/>
+        <TextBlock x:Name="WebsiteEvenement" HorizontalAlignment="Left" Margin="835,420,0,0" TextWrapping="Wrap" Text="..." VerticalAlignment="Top" FontSize="35px"/>
         <TextBlock x:Name="FavorietEvenement" HorizontalAlignment="Left" Margin="835,735,0,0" TextWrapping="Wrap" Text="Favoriet" VerticalAlignment="Top" FontSize="30px" />
         <ToggleSwitch x:Name="FavorietEvenementToggle" Toggled="Favoriet_Toggled" HorizontalAlignment="Left" Margin="835,780,0,0" VerticalAlignment="Top" FontSize="20px" OnContent="Ja" OffContent="Nee" />
         <Button Content="Route" Click="Kaart_Click" HorizontalAlignment="Left" Margin="1364,780,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.123,0.5" Height="40" Width="123"/>
-        <ListView x:Name="ListViewDetail" Background="Transparent" HorizontalAlignment="Left" Height="484" Margin="839,216,0,0" VerticalAlignment="Top" Width="616" IsItemClickEnabled="False" SelectedItem="false">
-            <ListViewItem Content="ListViewItem"/>
-            <ListViewItem Content="ListViewItem"/>
-            <ListViewItem Content="ListViewItem"/>
-            <ListViewItem Content="ListViewItem"/>
-        </ListView>
-
-
-
     </Grid>
 </Page>

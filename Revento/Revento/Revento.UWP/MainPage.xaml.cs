@@ -7,6 +7,7 @@ using Windows.ApplicationModel.Email;
 using Windows.Storage;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
+using Xamarin.Forms.Xaml;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -37,6 +38,8 @@ namespace Revento.UWP
 
     public sealed partial class MainPage : Page
     {
+        public string[] titles, date, description, website, address;
+
         public MainPage()
         {
             string XMLfile = Path.Combine(Package.Current.InstalledLocation.Path, "events.xml");
@@ -44,22 +47,26 @@ namespace Revento.UWP
             Event evenement = new Event();
             XDocument loadedfile = evenement.LoadXML(XMLfile);
 
-            string[] titles = evenement.ParseXML("title");
-            string[] date = evenement.ParseXML("date");
-            string[] description = evenement.ParseXML("description");
-            string[] website = evenement.ParseXML("website");
-            string[] address = evenement.ParseXML("address");
+            this.titles = evenement.ParseXML("title");
+            this.date = evenement.ParseXML("date");
+            this.description = evenement.ParseXML("description");
+            this.website = evenement.ParseXML("website");
+            this.address = evenement.ParseXML("address");
 
             this.InitializeComponent();
 
             ListViewEvenementen.ItemsSource = titles;
-            ListViewDetail.IsEnabled = false;
-
 
             //Initialize the ToggleSwitch for roaming settings
             if (ApplicationData.Current.RoamingSettings.Values.ContainsKey("FavorietEvenementToggle"))
                 FavorietEvenementToggle.IsOn = (bool)ApplicationData.Current.RoamingSettings.Values["FavorietEvenementToggle"];
         }
+
+        public string[] Title { get { return titles; } set { titles = value; } }
+        public string[] Date { get { return date; } set { date = value; } }
+        public string[] Description { get { return description; } set { description = value; } }
+        public string[] Website {  get { return website; } set { website = value; } }
+        public string[] Address { get { return address; } set { address = value; } }
 
         private void EvenementenSelectionChanged(object sender, RoutedEventArgs e)
         {
@@ -86,8 +93,17 @@ namespace Revento.UWP
 
         private void EvenementenSelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            Debug.WriteLine("Selected: {0}", e.AddedItems[0]);
-            TitelEvenement2.Text = e.AddedItems[0].ToString();
+            
+            Random random = new Random();
+            int i = 7;
+            
+            
+            //Debug.WriteLine("Selected: {0}", e.AddedItems[i]);
+            TitelEvenement2.Text = titles[i];
+            DatumEvenement.Text = date[i];
+            BeschrijvingEvenement.Text = description[i];
+            AdresEvenement.Text = address[i];
+            WebsiteEvenement.Text = website[i];
         }
 
         private void Favoriet_Toggled(object sender, RoutedEventArgs e)
