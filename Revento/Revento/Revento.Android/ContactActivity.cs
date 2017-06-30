@@ -11,16 +11,28 @@ namespace Revento.Droid
     public class ContactForm : Activity
     {
         private TextView _dateDisplay;
-        private Button _dateSelect;
+        private Button _dateSelect, _submit;
+        private EditText _eventTitle, _eventDescription, _eventAddress, _eventWebsite;
 
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
             SetContentView(Resource.Layout.Contact);
 
+            // Zoek onze items om een evenement te submitten
+            _eventTitle = FindViewById<EditText>(Resource.Id.EventTitle);
+            _eventDescription = FindViewById<EditText>(Resource.Id.EventDescription);
+            _eventAddress = FindViewById<EditText>(Resource.Id.EventAddress);
+            _eventWebsite = FindViewById<EditText>(Resource.Id.EventWebsite);
+
+            /// <summary>
+            /// Dit is om onze datum te selecteren
+            /// </summary>
             _dateDisplay = FindViewById<TextView>(Resource.Id.date_display);
             _dateSelect = FindViewById<Button>(Resource.Id.date_button);
             _dateSelect.Click += DateSelect_OnClick;
+
+            _submit = FindViewById<Button>(Resource.Id.submit);
 
             // Toon een backbutton in de actionbar
             ActionBar.SetHomeButtonEnabled(true);
