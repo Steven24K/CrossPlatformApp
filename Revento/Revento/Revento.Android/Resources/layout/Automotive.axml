@@ -5,20 +5,9 @@
     android:layout_height="match_parent"
     android:minWidth="25px"
     android:minHeight="25px"
-<<<<<<< HEAD
     android:id="@+id/linearLayout1">
     <ListView
         android:id="@android:id/list"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
-=======
-    android:paddingTop="10dp"
-    android:paddingRight="10dp"
-    android:paddingBottom="10dp"
-    android:paddingLeft="10dp"
-    android:id="@+id/linearLayout1"> 
-      <ListView android:id="@android:id/list"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
->>>>>>> origin/master
 </LinearLayout>
