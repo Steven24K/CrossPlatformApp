@@ -83,6 +83,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AutomotiveActivity.cs" />
     <Compile Include="ContactActivity.cs" />
     <Compile Include="DetailsActivity.cs" />
     <Compile Include="MainActivity.cs" />
@@ -97,6 +98,9 @@
     <None Include="Properties\AndroidManifest.xml" />
     <None Include="Assets\AboutAssets.txt" />
     <AndroidResource Include="Resources\layout\Contact.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Automotive.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
@@ -135,7 +139,9 @@
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\menu\top_menus.xml" />
+    <AndroidResource Include="Resources\menu\top_menus.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <Import Project="..\Revento\Revento.projitems" Label="Shared" Condition="Exists('..\Revento\Revento.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />

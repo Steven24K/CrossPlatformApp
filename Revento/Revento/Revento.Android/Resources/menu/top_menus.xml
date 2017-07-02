@@ -8,4 +8,16 @@
        android:id="@+id/menu_contact"
        android:showAsAction="never"
        android:title="Contact" />
+  <item
+    android:id="@+id/menu_literatuur"
+    android:showAsAction="never"
+    android:title="Literatuur" />
+  <item 
+    android:id="@+id/menu_automotive"
+    android:showAsAction="never"
+    android:title="Automotive" />
+  <item 
+    android:id="@+id/menu_kunst"
+    android:showAsAction="never"
+    android:title="Kunst" />
 </menu>
