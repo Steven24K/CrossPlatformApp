@@ -86,6 +86,9 @@ namespace Revento.Droid
                 case "Favorieten":
                     NextActivity = new Intent(this, typeof(MainActivity));
                     break;
+                case "Automotive":
+                    NextActivity = new Intent(this, typeof(AutomotiveActivity));
+                    break;
 
                 default:
                     NextActivity = new Intent(this, typeof(MainActivity));
