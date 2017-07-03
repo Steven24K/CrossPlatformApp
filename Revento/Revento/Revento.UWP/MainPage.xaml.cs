@@ -85,18 +85,14 @@ namespace Revento.UWP
         {
             Debug.WriteLine("Overzicht Evenementen");
             CategorieTitel.Text = "Overzicht Evenementen";
-        }
+        }      
 
-        private void Favoriet_Click(object sender, RoutedEventArgs e)
+        private void Automotive_Click(object sender, RoutedEventArgs e)
         {
-            Debug.WriteLine("Overzicht Favorieten");
-            CategorieTitel.Text = "Overzicht Favorieten";
-        }
+            Debug.WriteLine("Auto");
+            CategorieTitel.Text = "Categorie: Automotive";
 
-        private void BlackList_Click(object sender, RoutedEventArgs e)
-        {
-            Debug.WriteLine("Overzicht BlackList");
-            CategorieTitel.Text = "Overzicht BlackList";
+            //XMLProcesser.SendXMLCategory(xmldocument)
         }
 
         private void EvenementenSelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -112,8 +108,6 @@ namespace Revento.UWP
             Uri uri = new Uri(website[id]);
             WebsiteEvenement2.NavigateUri = uri;
             adres = address[id];
-            
-            
         }
 
         private void Favoriet_Toggled(object sender, RoutedEventArgs e)

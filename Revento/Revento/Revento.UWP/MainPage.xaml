@@ -13,8 +13,15 @@
 
 
         <Button Content="Evenementen" Click="Evenement_CLick" HorizontalAlignment="Left" Margin="0,80,0,0" VerticalAlignment="Top" Width="230" FontSize="20px" FontWeight="Bold" Foreground="White" Background="#388E3C" />
-        <Button Content="Favorieten" Click="Favoriet_Click" HorizontalAlignment="Left" Margin="0,119,0,0" VerticalAlignment="Top" Width="230" FontSize="20px" FontWeight="Bold" Foreground="White" Background="#388E3C"/>
-        <Button Content="BlackList" Click="BlackList_Click" HorizontalAlignment="Left" Margin="0,158,0,0" VerticalAlignment="Top" Width="230" FontSize="20px" FontWeight="Bold" Foreground="White" Background="#388E3C"/>
+        <Button x:Name="AutomotiveButton" Content="Automotive" Click="Automotive_Click" HorizontalAlignment="Left" Margin="0,120,0,0" VerticalAlignment="Top" Width="230" FontSize="20px" FontWeight="Bold" Foreground="White" Background="#388E3C"/>
+        <Button Content="Film" HorizontalAlignment="Left" Margin="0,160,0,0" VerticalAlignment="Top" Width="230" FontSize="20px" FontWeight="Bold" Foreground="White" Background="#388E3C"/>
+        <Button Content="Kunst" HorizontalAlignment="Left" Margin="0,200,0,0" VerticalAlignment="Top" Width="230" FontSize="20px" FontWeight="Bold" Foreground="White" Background="#388E3C"/>
+        <Button Content="Literatuur" HorizontalAlignment="Left" Margin="0,240,0,0" VerticalAlignment="Top" Width="230" FontSize="20px" FontWeight="Bold" Foreground="White" Background="#388E3C"/>
+        <Button Content="Musea" HorizontalAlignment="Left" Margin="0,280,0,0" VerticalAlignment="Top" Width="230" FontSize="20px" FontWeight="Bold" Foreground="White" Background="#388E3C"/>
+        <Button Content="Muziek" HorizontalAlignment="Left" Margin="0,320,0,0" VerticalAlignment="Top" Width="230" FontSize="20px" FontWeight="Bold" Foreground="White" Background="#388E3C"/>
+        <Button Content="Overig" HorizontalAlignment="Left" Margin="0,360,0,0" VerticalAlignment="Top" Width="230" FontSize="20px" FontWeight="Bold" Foreground="White" Background="#388E3C"/>
+        <Button Content="Sport" HorizontalAlignment="Left" Margin="0,400,0,0" VerticalAlignment="Top" Width="230" FontSize="20px" FontWeight="Bold" Foreground="White" Background="#388E3C"/>
+        <Button Content="Stad" HorizontalAlignment="Left" Margin="0,440,0,0" VerticalAlignment="Top" Width="230" FontSize="20px" FontWeight="Bold" Foreground="White" Background="#388E3C"/>
         <Button Click="Contact_Click" HorizontalAlignment="Left" Margin="10,914,0,0" VerticalAlignment="Top" Width="80" FontSize="20px" FontWeight="Bold" Foreground="White" Height="80" RenderTransformOrigin="0.625,-0.9">
             <Button.Background>
                 <ImageBrush ImageSource="ms-appx:///img/Contact_Wit.png" Stretch="Fill"/>
@@ -22,11 +29,11 @@
         </Button>
 
         <Rectangle Fill="#FF4CAF50" HorizontalAlignment="Left" Margin="230,0,0,0" VerticalAlignment="Top" Height="80" Width="600"/>
-        <TextBlock x:Name="CategorieTitel" HorizontalAlignment="Left" Margin="235,10,0,0" TextWrapping="Wrap" Text="Overzicht Evenementen" VerticalAlignment="Top" FontSize="40px" FontWeight="Bold" Foreground="White" Width="595" Height="52" />
+        <TextBlock x:Name="CategorieTitel" HorizontalAlignment="Left" Margin="235,10,0,0" TextWrapping="Wrap" Text="Overzicht Evenementen" VerticalAlignment="Top" FontSize="40px" FontWeight="Bold" Foreground="White" Width="595" Height="65" />
 
         <ScrollViewer HorizontalAlignment="Left" Height="1000" Margin="230,80,0,0" VerticalAlignment="Top" Width="600" Background="#FFF9F9F9">
             <ListView x:Name="ListViewEvenementen" SelectionChanged="EvenementenSelectionChanged" HorizontalAlignment="Left" Height="1080" VerticalAlignment="Top" Width="600" Background="#FFF9F9F9">
-                
+
             </ListView>
         </ScrollViewer>
 
@@ -44,6 +51,7 @@
         <TextBlock x:Name="FavorietEvenement" HorizontalAlignment="Left" Margin="835,920,0,0" TextWrapping="Wrap" Text="Favoriet" VerticalAlignment="Top" FontSize="30px" />
         <ToggleSwitch x:Name="FavorietEvenementToggle" Toggled="Favoriet_Toggled" HorizontalAlignment="Left" Margin="835,960,0,0" VerticalAlignment="Top" FontSize="20px" OnContent="Ja" OffContent="Nee" />
         
-        
+
+
     </Grid>
 </Page>
