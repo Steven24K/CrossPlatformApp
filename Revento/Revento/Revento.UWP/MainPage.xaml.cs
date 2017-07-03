@@ -26,6 +26,7 @@ namespace Revento.UWP
     {
         private XDocument xdoc;
 
+        // Laad het XDocument op de locatie van het bestand
         public XDocument LoadXML(string filepath)
         {
             this.xdoc = XDocument.Load(filepath);
@@ -33,6 +34,7 @@ namespace Revento.UWP
             return xdoc;
         }
 
+        // Haal de elementen uit het XDocument en stop ze in een array
         public string[] ParseXML(string attribute)
         {
             string[] _event = XMLProcesser.SendXML(xdoc, attribute);
@@ -40,6 +42,7 @@ namespace Revento.UWP
             return _event;
         }
 
+        // Haal de elementen (inclusief categorie) uit het XDocument en stop ze in een array
         public string[] ParseXMLCategory(string attribute, string category)
         {
             string[] _event = XMLProcesser.SendXMLCategory(xdoc, attribute, category);
@@ -53,13 +56,16 @@ namespace Revento.UWP
         public string[] titles, date, description, website, address;
         public int index;
         public string adres;
+        private Button button;
 
         public XDocument loadedfile;
 
         public MainPage()
         {
+            // Laad het XML bestand in
             string XMLfile = Path.Combine(Package.Current.InstalledLocation.Path, "events.xml");
 
+            // Parse het xml bestand en sorteer de informatie op titel, datum, beschrijving, website en adres
             Event evenement = new Event();
             loadedfile = evenement.LoadXML(XMLfile);
 
@@ -71,40 +77,54 @@ namespace Revento.UWP
 
             this.InitializeComponent();
 
-            ListViewEvenementen.ItemsSource = titles;
-
-            
-            //Initialize the ToggleSwitch for roaming settings
-            if (ApplicationData.Current.RoamingSettings.Values.ContainsKey("FavorietEvenementToggle"))
-                FavorietEvenementToggle.IsOn = (bool)ApplicationData.Current.RoamingSettings.Values["FavorietEvenementToggle"];
+            // Verander de ItemsSource naar de titles array en toon ze op het scherm
+            ListViewEvenementen.ItemsSource = titles;            
         }
 
-        public string[] Title { get { return titles; } set { titles = value; } }
-        public string[] Date { get { return date; } set { date = value; } }
-        public string[] Description { get { return description; } set { description = value; } }
-        public string[] Website {  get { return website; } set { website = value; } }
-        public string[] Address { get { return address; } set { address = value; } }
-
-        private void EvenementenSelectionChanged(object sender, RoutedEventArgs e)
-        {
-            Debug.WriteLine("ListItem");
-        }
-
+        // Handle de klik wanneer er op een evenement wordt geklikt
         private void Evenement_CLick(object sender, RoutedEventArgs e)
         {
-            Debug.WriteLine("Overzicht Evenementen");
             CategorieTitel.Text = "Overzicht Evenementen";
-        }      
+        }   
 
-        private void Automotive_Click(object sender, RoutedEventArgs e)
+        // Toon alle gegevens van een evenement wanneer er op een evenement wordt geklikt
+        private void CategorySelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            Debug.WriteLine("Auto");
-            // CategorieTitel.Text = "Categorie: Automotive";
+            var id = ListViewCategory.SelectedIndex;
 
-            // XMLProcesser.SendXMLCategory(xmldocument)
-            XMLProcesser.SendXMLCategory(loadedfile, "title", "Automotive");
+            switch (id)
+            {
+                case 0:
+                    CategorieTitel.Text = "Automotive";
+                    break;
+                case 1:
+                    CategorieTitel.Text = "Film";
+                    break;
+                case 2:
+                    CategorieTitel.Text = "Kunst";
+                    break;
+                case 3:
+                    CategorieTitel.Text = "Literatuur";
+                    break;
+                case 4:
+                    CategorieTitel.Text = "Musea";
+                    break;
+                case 5:
+                    CategorieTitel.Text = "Muziek";
+                    break;
+                case 6:
+                    CategorieTitel.Text = "Overig";
+                    break;
+                case 7:
+                    CategorieTitel.Text = "Sport";
+                    break;
+                case 8:
+                    CategorieTitel.Text = "Stad";
+                    break;
+            }
         }
 
+        // Toon alle gegevens van een evenement wanneer er op een evenement wordt geklikt
         private void EvenementenSelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             var id = ListViewEvenementen.SelectedIndex;
@@ -119,6 +139,7 @@ namespace Revento.UWP
             adres = address[id];
         }
 
+        // Handle de mail functionaliteit
         private async void Contact_Click(object sender, RoutedEventArgs e)
         {
             EmailMessage emailMessage = new EmailMessage();
@@ -131,9 +152,9 @@ namespace Revento.UWP
             await EmailManager.ShowComposeNewEmailAsync(emailMessage);
         }
 
+        // Handle de kaart functionaliteit
         private async void Kaart_Click(object sender, RoutedEventArgs e)
         {
-
             // Locaties
             var uriLocation = new Uri("bingmaps:?where=" + adres);
 

@@ -75,6 +75,7 @@ namespace Revento.Droid
             return base.OnOptionsItemSelected(item);
         }
 
+        
         public void OpenActivity(string _activity)
         {
             var NextActivity = new Intent(this, typeof(MainActivity));
