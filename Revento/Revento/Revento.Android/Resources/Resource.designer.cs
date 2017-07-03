@@ -2136,37 +2136,34 @@ namespace Revento.Droid
 			public const int media_actions = 2131099781;
 			
 			// aapt resource value: 0x7f060090
-			public const int menu_Favorieten = 2131099792;
-			
-			// aapt resource value: 0x7f060091
-			public const int menu_automotive = 2131099793;
+			public const int menu_automotive = 2131099792;
 			
 			// aapt resource value: 0x7f06008f
 			public const int menu_contact = 2131099791;
 			
+			// aapt resource value: 0x7f060091
+			public const int menu_film = 2131099793;
+			
 			// aapt resource value: 0x7f060092
-			public const int menu_film = 2131099794;
+			public const int menu_kunst = 2131099794;
 			
 			// aapt resource value: 0x7f060093
-			public const int menu_kunst = 2131099795;
+			public const int menu_literatuur = 2131099795;
 			
 			// aapt resource value: 0x7f060094
-			public const int menu_literatuur = 2131099796;
+			public const int menu_musea = 2131099796;
 			
 			// aapt resource value: 0x7f060095
-			public const int menu_musea = 2131099797;
+			public const int menu_muziek = 2131099797;
 			
 			// aapt resource value: 0x7f060096
-			public const int menu_muziek = 2131099798;
+			public const int menu_overig = 2131099798;
 			
 			// aapt resource value: 0x7f060097
-			public const int menu_overig = 2131099799;
+			public const int menu_sport = 2131099799;
 			
 			// aapt resource value: 0x7f060098
-			public const int menu_sport = 2131099800;
-			
-			// aapt resource value: 0x7f060099
-			public const int menu_stad = 2131099801;
+			public const int menu_stad = 2131099800;
 			
 			// aapt resource value: 0x7f06001d
 			public const int middle = 2131099677;

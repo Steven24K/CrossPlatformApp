@@ -51,27 +51,32 @@ namespace Revento.Droid
 
         private void SubmitButonOnclick(object sender, EventArgs e)
         {
-            var email = new Intent(Android.Content.Intent.ActionSend);
-            email.PutExtra(Android.Content.Intent.ExtraEmail,
-            new string[] { "reventoevents@gmail.com" });
-
-            email.PutExtra(Android.Content.Intent.ExtraSubject, "Evenement insturen");
-
-            email.PutExtra(Android.Content.Intent.ExtraText,
-            "Geachte redactie van Revento, \n \n" + "Titel van evenement: " + _eventTitle.Text + "\nDatum van evenement: " + _dateDisplay.Text +
-            "\n" + "Beschrijving van evenement: " + _eventDescription.Text + "\nAdres van evenement: " + _eventAddress.Text + "\nWebsite van het evenement: " + _eventWebsite.Text);
-            email.SetType("message/rfc822");
-            StartActivity(email);
-
-            /*if (_eventTitle.Text.Length > 0 && _dateDisplay.Text.Length > 0 && _eventDescription.Text.Length > 0 && _eventAddress.Text.Length > 0 && _eventWebsite.Text.Length > 0)
+            if (_eventTitle.Text.Length > 0 && _dateDisplay.Text.Length > 0 && _eventDescription.Text.Length > 0 && _eventAddress.Text.Length > 0 && _eventWebsite.Text.Length > 0)
             {
-                XmlWriter.AddEvent(this, "events.xml", _eventTitle.Text, _dateDisplay.Text, _eventDescription.Text, _eventAddress.Text, _eventWebsite.Text);
-            
+                //XmlWriter.AddEvent(this, "events.xml", _eventTitle.Text, _dateDisplay.Text, _eventDescription.Text, _eventAddress.Text, _eventWebsite.Text);
+                var email = new Intent(Android.Content.Intent.ActionSend);
+                email.PutExtra(Android.Content.Intent.ExtraEmail,
+                new string[] { "reventoevents@gmail.com" });
+
+                email.PutExtra(Android.Content.Intent.ExtraSubject, "Evenement insturen");
+
+                email.PutExtra(Android.Content.Intent.ExtraText,
+                "Geachte redactie van Revento, \n \n" + "Titel van evenement: " + _eventTitle.Text + "\nDatum van evenement: " + _dateDisplay.Text +
+                "\n" + "Beschrijving van evenement: " + _eventDescription.Text + "\nAdres van evenement: " + _eventAddress.Text + "\nWebsite van het evenement: " + _eventWebsite.Text);
+                email.SetType("message/rfc822");
+                try
+                {
+                    StartActivity(email);
+                }
+                catch
+                {
+                    Toast.MakeText(this,"Sorry can't send email",ToastLength.Short);
+                }
             }
             else
             {
                 Toast.MakeText(this, "Please fill in all fields", ToastLength.Short).Show();
-            }*/
+            }
         }
 
         // Override de functionaliteit van de backbutton zodat het teruggaat naar de mainactivity
