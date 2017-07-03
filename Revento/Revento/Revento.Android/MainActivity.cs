@@ -83,10 +83,7 @@ namespace Revento.Droid
             {
                 case "Contact":
                     NextActivity = new Intent(this, typeof(ContactForm));
-                    break;
-                case "Favorieten":
-                    NextActivity = new Intent(this, typeof(MainActivity));
-                    break;
+                    break;                
                 case "Automotive":
                     category = "Automotive";
                     NextActivity = new Intent(this, typeof(CategoryActivity));
