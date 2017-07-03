@@ -14,15 +14,16 @@ using System.Xml.Linq;
 
 namespace Revento.Droid
 {
-    [Activity(Label = "Automotive")]
-    public class AutomotiveActivity : ListActivity
+    [Activity(Label = "Categorie")]
+    public class CategoryActivity : ListActivity
     {
         string[] EventTitle, EventDate, EventDescription, EventAddress, EventWebsite;
+        private string category = MainActivity.category;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-            SetContentView(Resource.Layout.Automotive);
+            SetContentView(Resource.Layout.Category);
 
             // Create your application here
             // Open het xml bestand vanuit de assets folder
@@ -36,11 +37,11 @@ namespace Revento.Droid
             XDocument xdoc = XDocument.Parse(readertext);
 
             // Laat onze XMLProcessor alle informatie uit het xml bestand halen
-            EventTitle = XMLProcesser.SendXMLAutomotive(xdoc, "title");
-            EventDate = XMLProcesser.SendXMLAutomotive(xdoc, "date");
-            EventDescription = XMLProcesser.SendXMLAutomotive(xdoc, "description");
-            EventAddress = XMLProcesser.SendXMLAutomotive(xdoc, "address");
-            EventWebsite = XMLProcesser.SendXMLAutomotive(xdoc, "website");
+            EventTitle = XMLProcesser.SendXMLCategory(xdoc, "title", category);
+            EventDate = XMLProcesser.SendXMLCategory(xdoc, "date", category);
+            EventDescription = XMLProcesser.SendXMLCategory(xdoc, "description", category);
+            EventAddress = XMLProcesser.SendXMLCategory(xdoc, "address", category);
+            EventWebsite = XMLProcesser.SendXMLCategory(xdoc, "website", category);
 
             // Toon de titel en datum van het evenement in de lijst van het homescreen
             this.ListAdapter = new MainScreenAdapter(EventTitle, EventDate, this);

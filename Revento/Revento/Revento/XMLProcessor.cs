@@ -37,7 +37,7 @@ namespace Revento
             return RetEvents;
         }
 
-        public static string[] SendXMLAutomotive(XDocument xmldocument, string attribute)
+        public static string[] SendXMLCategory(XDocument xmldocument, string attribute, string category)
         {
             Itterator<string> EventList = new ArrayItterator<string>();
 
@@ -46,7 +46,7 @@ namespace Revento
                         select c.Element(attribute).Value;*/
 
             var q = (from c in xmldocument.Descendants("event")
-                     where c.Element("category").Value == "Automotive"                 
+                     where c.Element("category").Value == category                 
                      select c.Element(attribute).Value);
 
             foreach (var title in q)

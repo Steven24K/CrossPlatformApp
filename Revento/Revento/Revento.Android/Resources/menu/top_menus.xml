@@ -1,23 +1,48 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
-  <item
-       android:id="@+id/menu_Favorieten"
-       android:showAsAction="never"
-       android:title="Favorieten" />
-  <item
-       android:id="@+id/menu_contact"
-       android:showAsAction="never"
-       android:title="Contact" />
-  <item
-    android:id="@+id/menu_literatuur"
-    android:showAsAction="never"
-    android:title="Literatuur" />
-  <item 
-    android:id="@+id/menu_automotive"
-    android:showAsAction="never"
-    android:title="Automotive" />
-  <item 
-    android:id="@+id/menu_kunst"
-    android:showAsAction="never"
-    android:title="Kunst" />
+<menu xmlns:android="http://schemas.android.com/apk/res/android">    
+    <item
+        android:id="@+id/menu_contact"
+        android:showAsAction="never"
+        android:title="Contact" />
+    <item
+        android:id="@+id/menu_Favorieten"
+        android:showAsAction="never"
+        android:title="Favorieten" />
+    
+    <item
+        android:id="@+id/menu_automotive"
+        android:showAsAction="never"
+        android:title="Automotive" />
+    <item
+        android:id="@+id/menu_film"
+        android:showAsAction="never"
+        android:title="Film" />
+    <item
+        android:id="@+id/menu_kunst"
+        android:showAsAction="never"
+        android:title="Kunst" />
+    <item
+        android:id="@+id/menu_literatuur"
+        android:showAsAction="never"
+        android:title="Literatuur" />
+    <item
+        android:id="@+id/menu_musea"
+        android:showAsAction="never"
+        android:title="Musea" />
+    <item
+        android:id="@+id/menu_muziek"
+        android:showAsAction="never"
+        android:title="Muziek" />
+    <item
+        android:id="@+id/menu_overig"
+        android:showAsAction="never"
+        android:title="Overig" />
+    <item
+        android:id="@+id/menu_sport"
+        android:showAsAction="never"
+        android:title="Sport" />
+    <item
+        android:id="@+id/menu_stad"
+        android:showAsAction="never"
+        android:title="Stad" />
 </menu>

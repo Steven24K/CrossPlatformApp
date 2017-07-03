@@ -83,7 +83,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AutomotiveActivity.cs" />
+    <Compile Include="CategoryActivity.cs" />
     <Compile Include="ContactActivity.cs" />
     <Compile Include="DetailsActivity.cs" />
     <Compile Include="MainActivity.cs" />
@@ -100,7 +100,7 @@
     <AndroidResource Include="Resources\layout\Contact.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
-    <AndroidResource Include="Resources\layout\Automotive.axml">
+    <AndroidResource Include="Resources\layout\Category.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

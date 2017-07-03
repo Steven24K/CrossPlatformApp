@@ -13,6 +13,7 @@ namespace Revento.Droid
     public class MainActivity : ListActivity
     {
         string[] EventTitle, EventDate, EventDescription, EventAddress, EventWebsite;
+        public static string category;
 
         protected override void OnCreate(Bundle bundle)
         {
@@ -87,7 +88,40 @@ namespace Revento.Droid
                     NextActivity = new Intent(this, typeof(MainActivity));
                     break;
                 case "Automotive":
-                    NextActivity = new Intent(this, typeof(AutomotiveActivity));
+                    category = "Automotive";
+                    NextActivity = new Intent(this, typeof(CategoryActivity));
+                    break;
+                case "Film":
+                    category = "Film";
+                    NextActivity = new Intent(this, typeof(CategoryActivity));
+                    break;
+                case "Kunst":
+                    category = "Kunst";
+                    NextActivity = new Intent(this, typeof(CategoryActivity));
+                    break;
+                case "Literatuur":
+                    category = "Literatuur";
+                    NextActivity = new Intent(this, typeof(CategoryActivity));
+                    break;
+                case "Musea":
+                    category = "Musea";
+                    NextActivity = new Intent(this, typeof(CategoryActivity));
+                    break;
+                case "Muziek":
+                    category = "Muziek";
+                    NextActivity = new Intent(this, typeof(CategoryActivity));
+                    break;
+                case "Overig":
+                    category = "Overig";
+                    NextActivity = new Intent(this, typeof(CategoryActivity));
+                    break;
+                case "Sport":
+                    category = "Sport";
+                    NextActivity = new Intent(this, typeof(CategoryActivity));
+                    break;
+                case "Stad":
+                    category = "Stad";
+                    NextActivity = new Intent(this, typeof(CategoryActivity));
                     break;
 
                 default:
@@ -95,13 +129,7 @@ namespace Revento.Droid
                     break;
             }
 
-
             StartActivity(NextActivity);
         }
-
     }
-
-
 }
-
-
