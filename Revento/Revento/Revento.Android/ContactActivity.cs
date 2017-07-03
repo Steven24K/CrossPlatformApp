@@ -67,6 +67,7 @@ namespace Revento.Droid
                 try
                 {
                     StartActivity(email);
+                    Finish();
                 }
                 catch
                 {

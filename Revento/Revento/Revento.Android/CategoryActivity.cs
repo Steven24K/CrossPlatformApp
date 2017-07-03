@@ -14,9 +14,11 @@ using System.Xml.Linq;
 
 namespace Revento.Droid
 {
-    [Activity(Label = "Categorie")]
+
+    [Activity(Label = "Category")]
     public class CategoryActivity : ListActivity
     {
+        private string title = MainActivity.category;
         string[] EventTitle, EventDate, EventDescription, EventAddress, EventWebsite;
         private string category = MainActivity.category;
 
@@ -24,6 +26,12 @@ namespace Revento.Droid
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.Category);
+
+            this.Title = title;
+
+            // Toon een backbutton in de actionbar
+            ActionBar.SetHomeButtonEnabled(true);
+            ActionBar.SetDisplayHomeAsUpEnabled(true);
 
             // Create your application here
             // Open het xml bestand vanuit de assets folder
@@ -61,6 +69,20 @@ namespace Revento.Droid
             NextActivity.PutExtra("website", EventWebsite[id]);
 
             StartActivity(NextActivity);
+        }
+
+        // Override de functionaliteit van de backbutton zodat het teruggaat naar de mainactivity
+        public override bool OnOptionsItemSelected(IMenuItem item)
+        {
+            switch (item.ItemId)
+            {
+                case Android.Resource.Id.Home:
+                    Finish();
+                    return true;
+
+                default:
+                    return base.OnOptionsItemSelected(item);
+            }
         }
     }
 }

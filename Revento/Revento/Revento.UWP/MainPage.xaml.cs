@@ -39,6 +39,13 @@ namespace Revento.UWP
 
             return _event;
         }
+
+        public string[] ParseXMLCategory(string attribute, string category)
+        {
+            string[] _event = XMLProcesser.SendXMLCategory(xdoc, attribute, category);
+
+            return _event;
+        }
     }
 
     public sealed partial class MainPage : Page
@@ -47,12 +54,14 @@ namespace Revento.UWP
         public int index;
         public string adres;
 
+        public XDocument loadedfile;
+
         public MainPage()
         {
             string XMLfile = Path.Combine(Package.Current.InstalledLocation.Path, "events.xml");
 
             Event evenement = new Event();
-            XDocument loadedfile = evenement.LoadXML(XMLfile);
+            loadedfile = evenement.LoadXML(XMLfile);
 
             this.titles = evenement.ParseXML("title");
             this.date = evenement.ParseXML("date");
@@ -90,16 +99,16 @@ namespace Revento.UWP
         private void Automotive_Click(object sender, RoutedEventArgs e)
         {
             Debug.WriteLine("Auto");
-            CategorieTitel.Text = "Categorie: Automotive";
+            // CategorieTitel.Text = "Categorie: Automotive";
 
-            //XMLProcesser.SendXMLCategory(xmldocument)
+            // XMLProcesser.SendXMLCategory(xmldocument)
+            XMLProcesser.SendXMLCategory(loadedfile, "title", "Automotive");
         }
 
         private void EvenementenSelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             var id = ListViewEvenementen.SelectedIndex;
             
-            //Debug.WriteLine("Selected: {0}", e.AddedItems[i]);
             TitelEvenement2.Text = titles[id];
             DatumEvenement.Text = date[id];
             BeschrijvingEvenement.Text = description[id];
@@ -108,20 +117,6 @@ namespace Revento.UWP
             Uri uri = new Uri(website[id]);
             WebsiteEvenement2.NavigateUri = uri;
             adres = address[id];
-        }
-
-        private void Favoriet_Toggled(object sender, RoutedEventArgs e)
-        {
-            ApplicationData.Current.RoamingSettings.Values["FavorietEvenementToggle"] = FavorietEvenementToggle.IsOn;
-
-            if (FavorietEvenementToggle.IsOn)
-            {
-                FavorietEvenement.Text = "Opgeslagen als favoriet";
-            }
-            else
-            {
-                FavorietEvenement.Text = "Favoriet";
-            }
         }
 
         private async void Contact_Click(object sender, RoutedEventArgs e)
