@@ -1,46 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <resources>
   <event>
-    <title>Welcome to the Future</title>
-    <date>22 juli 2017</date>
-    <description>United through music, we dance towards the future</description>
-    <address>Noorderlaaik 1, 1511 BX Oostzaan</address>
-    <website>https://www.facebook.com/events/104257123351976/</website>
-  </event>
-  <event>
-    <title>Modular Festival 2017</title>
-    <date>1 juli 2017</date>
-    <description>Beschrijving</description>
-    <address>Park Maasboulevard 3, 3114 HB Schiedam</address>
-    <website>https://www.facebook.com/events/1632069510434097/</website>
-  </event>
-  <event>
-    <title>Rotterdam Rave Festival 2017</title>
-    <date>19 augustus 2017</date>
-    <description>Mark your calenders! On August 19th it's time for our second outdoor festival.</description>
-    <address>Schiehaven 5, 3024 EC Rotterdam</address>
-    <website>https://www.facebook.com/events/396574274066993/</website>
-  </event>
-  <event>
-    <title>Brandersfeesten 2017</title>
-    <date>22 september 2017</date>
-    <description>Beschrijving</description>
-    <address>3111 Schiedam</address>
-    <website>https://www.facebook.com/events/287761984974533/</website>
-  </event>
-  <event>
     <title>Dwaze Dingen - kijk en doeboekje</title>
     <date>1 april 2017 – 31 december 2017</date>
     <description>Een borstel gemaakt van mensenhaar, een stoel geknoopt van touw en een boot die eigenlijk een bad is. Met een zelf gevouwen happertje kom je langs bijzondere voorwerpen en krijg je verrassende opdrachten. En weet jij de puzzel op te lossen? Vraag bij de informatiebalie om het kijk- en doeboekje Dwaze dingen.</description>
     <address>Museumpark 18, 3015 CX ROTTERDAM</address>
     <website>http://www.boijmans.nl/nl/7/kalender/calendaritem/1413/dwaze-dingen</website>
-  </event>
-  <event>
-    <title>Droomreis naar jouw paradijs (6+)</title>
-    <date>8 juni 2017 – 17 september 2017</date>
-    <description>In de tentoonstelling reis je kris kras over onze planeet. Welke te gekke dieren, mensen en natuur neem jij mee naar jouw droomplek? Faca uma otima viagem!</description>
-    <address>Wilhelminakade 332, 3072 AR ROTTERDAM</address>
-    <website>http://www.nederlandsfotomuseum.nl/</website>
+    <category>Literatuur</category>
   </event>
   <event>
     <title>North Sea Round Town</title>
@@ -48,6 +14,15 @@
     <description>North Sea Round Town is het jaarlijkse Fringe Festival van North Sea Jazz dat met een gratis en afwisselend programma neerstrijkt in Rotterdam van 22 juni t/m 9 juli 2017, met het beste dat Rotterdam te bieden heeft aan jazz. Op tientallen locaties: bij jou in de straat, op onverwachte plekken, pop-up's en grote jazz-podia.</description>
     <address>Diverse locaties 1, 3013 AL ROTTERDAM</address>
     <website>http://northsearoundtown.nl</website>
+    <category>Muziek</category>
+  </event>
+  <event>
+    <title>Droomreis naar jouw paradijs (6+)</title>
+    <date>8 juni 2017 – 17 september 2017</date>
+    <description>In de tentoonstelling reis je kris kras over onze planeet. Welke te gekke dieren, mensen en natuur neem jij mee naar jouw droomplek? Faca uma otima viagem!</description>
+    <address>Wilhelminakade 332, 3072 AR ROTTERDAM</address>
+    <website>http://www.nederlandsfotomuseum.nl/</website>
+    <category>Musea</category>
   </event>
   <event>
     <title>Elza Soares: The Woman At The End Of The World</title>
@@ -55,6 +30,7 @@
     <description>Met bijna zeven decennia aan albums en optredens achter haar naam, wordt de Braziliaanse protestzangeres Elza Soares bewierookt als de Grande Dame van de sambamuziek. Lantarenvenster, Rotterdamse Schouwburg, North Sea Round Town, BIRD, Motel Mozaïque en Rotown.</description>
     <address>Schouwburgplein 25, 3012 CL ROTTERDAM</address>
     <website>https://www.facebook.com/elzasoaresoficial/</website>
+    <category>Muziek</category>
   </event>
   <event>
     <title>schilder 'Zon Zee Strand'</title>
@@ -62,6 +38,7 @@
     <description>Tijdens dit creatieve avondje uit hoef je alleen maar te genieten! onder het genot van een hapje en een drankje, creëer je zo een mooi schilderij.</description>
     <address>Marconistraat 39, 3029 AG ROTTERDAM</address>
     <website>https://paintbar.nl/events/zuid-holland.html/</website>
+    <category>Kunst</category>
   </event>
   <event>
     <title>Markant Rotterdam</title>
@@ -69,6 +46,7 @@
     <description>De rondleiding gaat langs alle belangrijkste bezienswaardigheden van de binnenstad, waaronder het nieuwe CS en de Markthal.</description>
     <address>Hoogstraat 110, 3011 PV ROTTERDAM</address>
     <website>http://www.gilderotterdam.nl/</website>
+    <category>Stad</category>
   </event>
   <event>
     <title>Rotterdam Sight running Tours</title>
@@ -76,6 +54,7 @@
     <description>Hardlopend de stad Rotterdam ontdekken is hét motto van de Rotterdam Sight running Tours.</description>
     <address>Willemsplein 77, 3016 DR ROTTERDAM</address>
     <website>http://rotterdamsightrunningtours.com/</website>
+    <category>Stad</category>
   </event>
   <event>
     <title>Fietstour door Kralingen</title>
@@ -83,6 +62,7 @@
     <description>U fietst vanuit het oude Kralingen richting het Bedrijvenpark Rivium, het nieuwe DWL-woongebied met de watertoren. Op koers langs de Kralingse Plas naar de molens. Onderweg is er voldoende tijd om interessante bezienswaardigheden, waaronder de Wagner villa’s te bekijken.</description>
     <address>Hoogstraat 110, 3011 PV ROTTERDAM</address>
     <website>https://www.facebook.com/gilderotterdam/</website>
+    <category>Stad</category>
   </event>
   <event>
     <title>De Lego Batman Film</title>
@@ -90,6 +70,7 @@
     <description>In de geest van de zorgeloze pret die De LEGO Film tot een wereldwijd fenomeen maakte, speelt de zelfbenoemde leider van dat gezelschap – LEGO Batman – nu de hoofdrol in zijn eigen bioscoopavontuur.</description>
     <address>Herenwaard 17, 3078 AK ROTTERDAM</address>
     <website>http://www.islemunda.nl/home</website>
+    <category>Film</category>
   </event>
   <event>
     <title>Voetbaltoernooi De Nieuwe Poort</title>
@@ -97,6 +78,7 @@
     <description>Voetballend maatschappelijke verschillen overbruggen, dat is het doel van De Nieuwe Poort met een splinternieuw straatvoetbaltoernooi. Samen met scholieren van het Rotterdams Vakcollege ‘de Hef’ nemen Rotterdamse ondernemers het tegen elkaar op. Alle bedrijven in Rotterdam kunnen zich inschrijven voor een team. Schrijf je in via de website of moedig de teams aan langs het plein!</description>
     <address>Schouwburgplein 1, 3012 CL ROTTERDAM</address>
     <website>http://www.schouwburgpleinrotterdam.nl/agenda_item/straatvoetbaltoernooi-de-nieuwe-poort/</website>
+    <category>Sport</category>
   </event>
   <event>
     <title>Kinderstreken</title>
@@ -104,6 +86,7 @@
     <description>Workshop voor kinderen van 5 - 13 jaar. Door leerlingen en docenten van het Hellendaal Muziekinstituut met aansluitend een concert. Docenten zijn: Katja Dirven (cello), Marina Meerson (viool), Joukeline Sizoo (harp), Arjen Leenderdt (contrabas), Emeline Dessi (dwarsfluit). Deelnemende kinderen maken kennis met verschillende instrumenten, doen mee aan een hoorspel, proberen instrumenten uit en studeren een liedje in. Het lied wordt door alle deelnemers, docenten en leerlingen uitgevoerd. De deelnemers krijgen een presentje als herinnering aan hun allereerste workshop!</description>
     <address>Oudedijk 113, 3062 AD ROTTERDAM</address>
     <website>http://www.muzikc.nl/</website>
+    <category>Muziek</category>
   </event>
   <event>
     <title>Rotterdam Water Weekend</title>
@@ -111,20 +94,23 @@
     <description>Neem een duik in de Rotte of in een van de binnenhavens in het Maritiem District, ontmoet Desiderius Erasmus op een van de varende Picnic Islands, lounge &amp; luister naar Rotterdams upcoming musici en dichters of vaar mee met een gids die je alles vertelt over de historie en toekomst van ons waterrijke Rotterdam.</description>
     <address>Diverse locaties 1, 3013 AL ROTTERDAM</address>
     <website>http://rotterdamwaterweekend.nl/</website>
+    <category>Stad</category>
   </event>
   <event>
-    <title>Najib &amp; Jandino - Live in de Kuip</title>
+    <title>Modular Festival 2017</title>
+    <date>1 juli 2017</date>
+    <description>Beschrijving</description>
+    <address>Park Maasboulevard 3, 3114 HB Schiedam</address>
+    <website>https://www.facebook.com/events/1632069510434097/</website>
+    <category>Muziek</category>
+  </event>
+  <event>
+    <title>Najib en Jandino - Live in de Kuip</title>
     <date>1 juli 2017</date>
     <description>Twee van ’s lands grootste comedians treden op in het meest iconische stadion van Nederland: de Kuip. Omlijst door een muzikaal programma met een paar van de populairste acts van dit moment. Na Michael Jackson, Prince en Bruce Springsteen is De Kuip nu dus voor Najib en Jandino.</description>
     <address>Van Zandvlietplein 1, 3077 AA ROTTERDAM</address>
     <website>https://www.comedyenconcert.nl/</website>
-  </event>
-  <event>
-    <title>Monster Jam</title>
-    <date>30 juni 2018</date>
-    <description>Monster Jam is het meest spectaculaire live event vol actie op vier wielen. Al meer dan 25 jaar brengt Monster Jam wereldwijd high-power entertainment voor de hele familie, gecombineerd met ultieme off-road motorsport. Drivers van wereldklasse strijden in zowel monster truck racing en freestyle competities. De meest bekende trucks in de wereld, zoals Grave Digger®, Max-DTM, El Toro Loco®, Monster Mutt® en veel meer, laten het publiek op het puntje van hun stoel zitten met hun onvoorstelbare en zwaartekracht-tartende stunts.</description>
-    <address>Van Zandvlietplein 1, 3077 AA ROTTERDAM</address>
-    <website>http://www.monsterjam.nl/</website>
+    <category>Muziek</category>
   </event>
   <event>
     <title>Metropolis Festival</title>
@@ -132,6 +118,7 @@
     <description>Het Metropolis Festival is een jaarlijks, eendaags, gratis toegankelijk, openlucht muziekfestival op de eerste zondag in juli. Het programma bestaat uit een mix van pop, rock, hiphop, wereldmuziek en dance.</description>
     <address>Zuiderparkweg, 3084 ROTTERDAM</address>
     <website>http://metropolisfestival.nl/</website>
+    <category>Muziek</category>
   </event>
   <event>
     <title>Goochelacademie 'Lang zal je lezen'</title>
@@ -139,6 +126,7 @@
     <description>Goochelaar Agricola geeft tijdens de lessen eerst een goochelshow en legt daarna uit hoe de trucs in de show werken. Zo leer je elke week een paar goocheltrucs! Iedere week staat tijdens de show een ander jeugdboek centraal. Denk bijvoorbeeld aan Pietje Bell's goocheltoeren, Pinokkio en Stijn Uitvinder.</description>
     <address>Hoogstraat 110, 3011 PV ROTTERDAM</address>
     <website>https://www.bibliotheek.rotterdam.nl/</website>
+    <category>Literatuur</category>
   </event>
   <event>
     <title>Nederland - Wales (vrouwenvoetbal)</title>
@@ -146,6 +134,7 @@
     <description>Het Nederlands vrouwenelftal oefent zaterdag 8 juli tegen Wales. Het duel, dat vanaf 16.00 uur op het Kasteel in Rotterdam wordt gespeeld, vormt de afsluiting van Oranjes voorbereiding op WEURO2017.</description>
     <address>Spartastraat 7-9, 3027 ER ROTTERDAM</address>
     <website>http://www.onsoranje.nl/</website>
+    <category>Sport</category>
   </event>
   <event>
     <title>Ontmoet een echte douanehond</title>
@@ -153,5 +142,46 @@
     <description>Meet and Greet met de douanespeurhonden (AL). Speurhonden Bonnie en Kira hebben een neus voor douanewerk. Tijdens de vakantie snuffelen zij rond op Schiphol maar speciaal voor Woef! komen ze met hun geleider op bezoek. Kom kijken naar de demo of stel een vraag aan de geleider.</description>
     <address>Parklaan 14, 3016 BB ROTTERDAM</address>
     <website>https://www.bdmuseum.nl/</website>
+    <category>Overig</category>
+  </event>
+  <event>
+    <title>Welcome to the Future</title>
+    <date>22 juli 2017</date>
+    <description>United through music, we dance towards the future</description>
+    <address>Noorderlaaik 1, 1511 BX Oostzaan</address>
+    <website>https://www.facebook.com/events/104257123351976/</website>
+    <category>Muziek</category>
+  </event>
+  <event>
+    <title>Rotterdam Rave Festival 2017</title>
+    <date>19 augustus 2017</date>
+    <description>Mark your calenders! On August 19th it's time for our second outdoor festival.</description>
+    <address>Schiehaven 5, 3024 EC Rotterdam</address>
+    <website>https://www.facebook.com/events/396574274066993/</website>
+    <category>Muziek</category>
+  </event>
+  <event>
+    <title>Brandersfeesten 2017</title>
+    <date>22 september 2017</date>
+    <description>Beschrijving</description>
+    <address>3111 Schiedam</address>
+    <website>https://www.facebook.com/events/287761984974533/</website>
+    <category>Kunst</category>
+  </event>
+  <event>
+    <title>Autosalon Rotterdam</title>
+    <date>25 - 27 november 2017</date>
+    <description>Een autoshow van formaat vindt dit jaar weer plaats in de Ahoy te Rotterdam. Tijdens de Autosalon heb je de kans om de nieuwste automodellen van alle bekende automerken te bewonderen. Maar er is nog veel meer te beleven. De Autosalon vindt in 2017 plaats van 25 tot en met 27 november 2017.</description>
+    <address>Ahoyweg 10, 3084 BA Rotterdam</address>
+    <website>http://www.autosalonrotterdam.nl/nl/</website>
+    <category>Automotive</category>
+  </event>
+  <event>
+    <title>Monster Jam</title>
+    <date>30 juni 2018</date>
+    <description>Monster Jam is het meest spectaculaire live event vol actie op vier wielen. Al meer dan 25 jaar brengt Monster Jam wereldwijd high-power entertainment voor de hele familie, gecombineerd met ultieme off-road motorsport. Drivers van wereldklasse strijden in zowel monster truck racing en freestyle competities. De meest bekende trucks in de wereld, zoals Grave Digger®, Max-DTM, El Toro Loco®, Monster Mutt® en veel meer, laten het publiek op het puntje van hun stoel zitten met hun onvoorstelbare en zwaartekracht-tartende stunts.</description>
+    <address>Van Zandvlietplein 1, 3077 AA ROTTERDAM</address>
+    <website>http://www.monsterjam.nl/</website>
+    <category>Automotive</category>
   </event>
 </resources>

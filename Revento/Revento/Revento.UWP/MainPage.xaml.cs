@@ -133,7 +133,7 @@ namespace Revento.UWP
         private async void Contact_Click(object sender, RoutedEventArgs e)
         {
             EmailMessage emailMessage = new EmailMessage();
-            emailMessage.To.Add(new EmailRecipient("follie96@live.nl"));
+            emailMessage.To.Add(new EmailRecipient("reventoevents@gmail.com"));
             string messageBody = "Geachte Revento,";
             emailMessage.Body = messageBody;
             string subjectBody = "Evenement aanmelden";
