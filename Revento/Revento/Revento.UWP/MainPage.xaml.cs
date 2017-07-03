@@ -134,7 +134,7 @@ namespace Revento.UWP
         {
             EmailMessage emailMessage = new EmailMessage();
             emailMessage.To.Add(new EmailRecipient("reventoevents@gmail.com"));
-            string messageBody = "Geachte Revento,";
+            string messageBody = "Geachte Revento, \n \n" + "Titel van evenement: \n" + "Datum van evenement: \n" + "Beschrijving van evenement: \n" + "Adres van evenement: \n" + "Website van evenement: \n";
             emailMessage.Body = messageBody;
             string subjectBody = "Evenement aanmelden";
             emailMessage.Subject = subjectBody;
