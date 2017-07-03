@@ -147,11 +147,7 @@
     <Content Include="Assets\Wide310x150Logo.scale-125.png" />
     <Content Include="Assets\Wide310x150Logo.scale-150.png" />
     <Content Include="Assets\Wide310x150Logo.scale-400.png" />
-    <None Include="events.xml">
-      <SubType>
-      </SubType>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
+    <Content Include="events.xml" />
     <Content Include="img\Contact_Wit.png" />
     <Content Include="img\xamarin_logo_230.png" />
     <Content Include="Properties\Default.rd.xml" />
