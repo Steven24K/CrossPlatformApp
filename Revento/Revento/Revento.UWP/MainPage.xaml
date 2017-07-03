@@ -12,8 +12,8 @@
         <Image HorizontalAlignment="Left" VerticalAlignment="Top" Height="80" Width="230" Source="img/xamarin_logo_230.png" Opacity="0.4"/>
 
 
-        <Button Content="Evenementen" Click="Evenement_CLick" HorizontalAlignment="Left" Margin="0,80,0,0" VerticalAlignment="Top" Width="230" FontSize="20px" FontWeight="Bold" Foreground="White" Background="#388E3C" />
-        <!--<Button x:Name="AutomotiveButton" Content="Automotive" Click="Automotive_Click" HorizontalAlignment="Left" Margin="0,120,0,0" VerticalAlignment="Top" Width="230" FontSize="20px" FontWeight="Bold" Foreground="White" Background="#388E3C"/>
+        <!--<Button Content="Evenementen" Click="Evenement_CLick" HorizontalAlignment="Left" Margin="0,80,0,0" VerticalAlignment="Top" Width="230" FontSize="20px" FontWeight="Bold" Foreground="White" Background="#388E3C" />
+        <Button x:Name="AutomotiveButton" Content="Automotive" Click="Automotive_Click" HorizontalAlignment="Left" Margin="0,120,0,0" VerticalAlignment="Top" Width="230" FontSize="20px" FontWeight="Bold" Foreground="White" Background="#388E3C"/>
         <Button Content="Film" HorizontalAlignment="Left" Margin="0,160,0,0" VerticalAlignment="Top" Width="230" FontSize="20px" FontWeight="Bold" Foreground="White" Background="#388E3C"/>
         <Button Content="Kunst" HorizontalAlignment="Left" Margin="0,200,0,0" VerticalAlignment="Top" Width="230" FontSize="20px" FontWeight="Bold" Foreground="White" Background="#388E3C"/>
         <Button Content="Literatuur" HorizontalAlignment="Left" Margin="0,240,0,0" VerticalAlignment="Top" Width="230" FontSize="20px" FontWeight="Bold" Foreground="White" Background="#388E3C"/>
@@ -48,16 +48,17 @@
         <TextBlock x:Name="AdresEvenement" HorizontalAlignment="Left" Margin="835,700,0,0" TextWrapping="Wrap" Text="..." VerticalAlignment="Top" FontSize="30px"/>
         <HyperlinkButton x:Name="WebsiteEvenement2" Content="" HorizontalAlignment="Left" Margin="835,780,0,0" VerticalAlignment="Top" FontSize="20px"/>
         <Button Content="Route" Click="Kaart_Click" HorizontalAlignment="Left" Margin="835,840,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.123,0.5" Height="40" Width="123"/>
-        <ListView x:Name="ListViewCategory" SelectionChanged="CategorySelectionChanged" HorizontalAlignment="Left" Height="500" Margin="0,150,0,0" VerticalAlignment="Top" Width="230" Background="#FAFAFA">
-            <ListViewItem Content="Auto" Background="#CCC"/>
-            <ListViewItem Content="Film" Background="#CCC"/>
-            <ListViewItem Content="Kunst" Background="#CCC"/>
-            <ListViewItem Content="Literatuur" Background="#CCC"/>
-            <ListViewItem Content="Musea" Background="#CCC"/>
-            <ListViewItem Content="Muziek" Background="#CCC"/>
-            <ListViewItem Content="Overig" Background="#CCC"/>
-            <ListViewItem Content="Sport" Background="#CCC"/>
-            <ListViewItem Content="Stad" Background="#CCC"/>
+        <ListView x:Name="ListViewCategory" SelectionChanged="CategorySelectionChanged" HorizontalAlignment="Left" Height="440" Margin="0,80,0,0" VerticalAlignment="Top" Width="230" Background="#388E3C">
+            <ListViewItem Content="Evenementen" Background="#388E3C" Foreground="#FFF"/>
+            <ListViewItem Content="Automotive" Background="#388E3C" Foreground="#FFF"/>
+            <ListViewItem Content="Film" Background="#388E3C" Foreground="#FFF"/>
+            <ListViewItem Content="Kunst" Background="#388E3C" Foreground="#FFF"/>
+            <ListViewItem Content="Literatuur" Background="#388E3C" Foreground="#FFF"/>
+            <ListViewItem Content="Musea" Background="#388E3C" Foreground="#FFF"/>
+            <ListViewItem Content="Muziek" Background="#388E3C" Foreground="#FFF"/>
+            <ListViewItem Content="Overig" Background="#388E3C" Foreground="#FFF"/>
+            <ListViewItem Content="Sport" Background="#388E3C" Foreground="#FFF"/>
+            <ListViewItem Content="Stad" Background="#388E3C" Foreground="#FFF"/>
         </ListView>
 
 

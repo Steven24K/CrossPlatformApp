@@ -82,43 +82,47 @@ namespace Revento.UWP
         }
 
         // Handle de klik wanneer er op een evenement wordt geklikt
-        private void Evenement_CLick(object sender, RoutedEventArgs e)
+        /*private void Evenement_CLick(object sender, RoutedEventArgs e)
         {
             CategorieTitel.Text = "Overzicht Evenementen";
-        }   
+        }*/   
 
         // Toon alle gegevens van een evenement wanneer er op een evenement wordt geklikt
         private void CategorySelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
+        {          
             var id = ListViewCategory.SelectedIndex;
-
+            Debug.WriteLine(id);
+            
             switch (id)
             {
                 case 0:
-                    CategorieTitel.Text = "Automotive";
+                    CategorieTitel.Text = "Overzicht Evenementen";                    
                     break;
                 case 1:
-                    CategorieTitel.Text = "Film";
+                    CategorieTitel.Text = "Automotive";                   
                     break;
                 case 2:
-                    CategorieTitel.Text = "Kunst";
+                    CategorieTitel.Text = "Film";
                     break;
                 case 3:
-                    CategorieTitel.Text = "Literatuur";
+                    CategorieTitel.Text = "Kunst";
                     break;
                 case 4:
-                    CategorieTitel.Text = "Musea";
+                    CategorieTitel.Text = "Literatuur";
                     break;
                 case 5:
-                    CategorieTitel.Text = "Muziek";
+                    CategorieTitel.Text = "Musea";
                     break;
                 case 6:
-                    CategorieTitel.Text = "Overig";
+                    CategorieTitel.Text = "Muziek";
                     break;
                 case 7:
-                    CategorieTitel.Text = "Sport";
+                    CategorieTitel.Text = "Overig";
                     break;
                 case 8:
+                    CategorieTitel.Text = "Sport";
+                    break;
+                case 9:
                     CategorieTitel.Text = "Stad";
                     break;
             }
