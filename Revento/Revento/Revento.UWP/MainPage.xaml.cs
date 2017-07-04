@@ -19,8 +19,8 @@ namespace Revento.UWP
 
     public class ListViewDataItem : ListViewItem
     {
-        
-    } 
+
+    }
 
     public class Event
     {
@@ -57,10 +57,21 @@ namespace Revento.UWP
         public int index;
         public string adres;
         private Button button;
+        public static string category;
 
         public XDocument loadedfile;
 
         public MainPage()
+        {                    
+            LoadCategory("Alles");
+
+            this.InitializeComponent();
+
+            // Verander de ItemsSource naar de titles array en toon ze op het scherm
+            ListViewEvenementen.ItemsSource = titles;
+        }
+
+        public void LoadCategory(string categoryclick)
         {
             // Laad het XML bestand in
             string XMLfile = Path.Combine(Package.Current.InstalledLocation.Path, "events.xml");
@@ -69,61 +80,73 @@ namespace Revento.UWP
             Event evenement = new Event();
             loadedfile = evenement.LoadXML(XMLfile);
 
-            this.titles = evenement.ParseXML("title");
-            this.date = evenement.ParseXML("date");
-            this.description = evenement.ParseXML("description");
-            this.website = evenement.ParseXML("website");
-            this.address = evenement.ParseXML("address");
-
-            this.InitializeComponent();
-
-            // Verander de ItemsSource naar de titles array en toon ze op het scherm
-            ListViewEvenementen.ItemsSource = titles;            
+            if (categoryclick == "Alles")
+            {
+                titles = evenement.ParseXML("title");
+                date = evenement.ParseXML("date");
+                description = evenement.ParseXML("description");
+                website = evenement.ParseXML("website");
+                address = evenement.ParseXML("address");
+            }
+            else
+            {
+                titles = evenement.ParseXMLCategory("title", categoryclick);
+                date = evenement.ParseXMLCategory("date", categoryclick);
+                description = evenement.ParseXMLCategory("description", categoryclick);
+                website = evenement.ParseXMLCategory("website", categoryclick);
+                address = evenement.ParseXMLCategory("address", categoryclick);
+            }
         }
-
-        // Handle de klik wanneer er op een evenement wordt geklikt
-        /*private void Evenement_CLick(object sender, RoutedEventArgs e)
-        {
-            CategorieTitel.Text = "Overzicht Evenementen";
-        }*/   
 
         // Toon alle gegevens van een evenement wanneer er op een evenement wordt geklikt
         private void CategorySelectionChanged(object sender, SelectionChangedEventArgs e)
-        {          
+        {
             var id = ListViewCategory.SelectedIndex;
             Debug.WriteLine(id);
-            
+
             switch (id)
             {
                 case 0:
-                    CategorieTitel.Text = "Overzicht Evenementen";                    
+                    CategorieTitel.Text = "Overzicht Evenementen";
+                    category = "Alles";
+                    Debug.WriteLine(category);
                     break;
                 case 1:
-                    CategorieTitel.Text = "Automotive";                   
+                    CategorieTitel.Text = "Automotive";
+                    category = "Automotive";
+                    Debug.WriteLine(category);
                     break;
                 case 2:
                     CategorieTitel.Text = "Film";
+                    category = "Film";
                     break;
                 case 3:
                     CategorieTitel.Text = "Kunst";
+                    category = "Kunst";
                     break;
                 case 4:
                     CategorieTitel.Text = "Literatuur";
+                    category = "Literatuur";
                     break;
                 case 5:
                     CategorieTitel.Text = "Musea";
+                    category = "Musea";
                     break;
                 case 6:
                     CategorieTitel.Text = "Muziek";
+                    category = "Muziek";
                     break;
                 case 7:
                     CategorieTitel.Text = "Overig";
+                    category = "Overig";
                     break;
                 case 8:
                     CategorieTitel.Text = "Sport";
+                    category = "Sport";
                     break;
                 case 9:
                     CategorieTitel.Text = "Stad";
+                    category = "Stad";
                     break;
             }
         }
@@ -132,7 +155,7 @@ namespace Revento.UWP
         private void EvenementenSelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             var id = ListViewEvenementen.SelectedIndex;
-            
+
             TitelEvenement2.Text = titles[id];
             DatumEvenement.Text = date[id];
             BeschrijvingEvenement.Text = description[id];

@@ -11,17 +11,6 @@
         <Rectangle Fill="#388E3C" HorizontalAlignment="Left" VerticalAlignment="Top" Height="1080" Width="230" />
         <Image HorizontalAlignment="Left" VerticalAlignment="Top" Height="80" Width="230" Source="img/xamarin_logo_230.png" Opacity="0.4"/>
 
-
-        <!--<Button Content="Evenementen" Click="Evenement_CLick" HorizontalAlignment="Left" Margin="0,80,0,0" VerticalAlignment="Top" Width="230" FontSize="20px" FontWeight="Bold" Foreground="White" Background="#388E3C" />
-        <Button x:Name="AutomotiveButton" Content="Automotive" Click="Automotive_Click" HorizontalAlignment="Left" Margin="0,120,0,0" VerticalAlignment="Top" Width="230" FontSize="20px" FontWeight="Bold" Foreground="White" Background="#388E3C"/>
-        <Button Content="Film" HorizontalAlignment="Left" Margin="0,160,0,0" VerticalAlignment="Top" Width="230" FontSize="20px" FontWeight="Bold" Foreground="White" Background="#388E3C"/>
-        <Button Content="Kunst" HorizontalAlignment="Left" Margin="0,200,0,0" VerticalAlignment="Top" Width="230" FontSize="20px" FontWeight="Bold" Foreground="White" Background="#388E3C"/>
-        <Button Content="Literatuur" HorizontalAlignment="Left" Margin="0,240,0,0" VerticalAlignment="Top" Width="230" FontSize="20px" FontWeight="Bold" Foreground="White" Background="#388E3C"/>
-        <Button Content="Musea" HorizontalAlignment="Left" Margin="0,280,0,0" VerticalAlignment="Top" Width="230" FontSize="20px" FontWeight="Bold" Foreground="White" Background="#388E3C"/>
-        <Button Content="Muziek" HorizontalAlignment="Left" Margin="0,320,0,0" VerticalAlignment="Top" Width="230" FontSize="20px" FontWeight="Bold" Foreground="White" Background="#388E3C"/>
-        <Button Content="Overig" HorizontalAlignment="Left" Margin="0,360,0,0" VerticalAlignment="Top" Width="230" FontSize="20px" FontWeight="Bold" Foreground="White" Background="#388E3C"/>
-        <Button Content="Sport" HorizontalAlignment="Left" Margin="0,400,0,0" VerticalAlignment="Top" Width="230" FontSize="20px" FontWeight="Bold" Foreground="White" Background="#388E3C"/>
-        <Button Content="Stad" HorizontalAlignment="Left" Margin="0,440,0,0" VerticalAlignment="Top" Width="230" FontSize="20px" FontWeight="Bold" Foreground="White" Background="#388E3C"/>-->
         <Button Click="Contact_Click" HorizontalAlignment="Left" Margin="10,914,0,0" VerticalAlignment="Top" Width="80" FontSize="20px" FontWeight="Bold" Foreground="White" Height="80" RenderTransformOrigin="0.625,-0.9">
             <Button.Background>
                 <ImageBrush ImageSource="ms-appx:///img/Contact_Wit.png" Stretch="Fill"/>
@@ -41,7 +30,6 @@
         <TextBlock x:Name="DetailInformatie" HorizontalAlignment="Left" Margin="835,10,0,0" TextWrapping="Wrap" Text="Details" VerticalAlignment="Top" FontSize="40px" FontWeight="Bold" Foreground="White" />
 
         <Rectangle Fill="#FFF" HorizontalAlignment="Left" Height="1000" Margin="830,80,0,0" VerticalAlignment="Top" Width="1090"/>
-        <!--<TextBlock x:Name="TitleEvenement" HorizontalAlignment="Left" Margin="835,80,0,0" TextWrapping="Wrap" Text="Titel" VerticalAlignment="Top" FontSize="30px" FontWeight="Bold"/>-->
         <TextBlock x:Name="TitelEvenement2" HorizontalAlignment="Left" Margin="835,100,0,0" TextWrapping="Wrap" Text="..." VerticalAlignment="Top" FontSize="35px"/>
         <TextBlock x:Name="DatumEvenement" HorizontalAlignment="Left" Margin="835,180,0,0" TextWrapping="Wrap" Text="..." VerticalAlignment="Top" FontSize="30px"/>
         <TextBlock x:Name="BeschrijvingEvenement" HorizontalAlignment="Left" Margin="835,260,0,0" TextWrapping="Wrap" Text="..." VerticalAlignment="Top" FontSize="25px"/>
