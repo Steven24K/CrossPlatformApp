@@ -72,7 +72,7 @@ namespace Revento.Droid
                 }
                 catch
                 {
-                    Toast.MakeText(this,"Sorry can't send email",ToastLength.Short);
+                    Toast.MakeText(this, "Sorry can't send email", ToastLength.Short).Show();
                 }
             }
             else
