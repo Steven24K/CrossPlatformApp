@@ -4,10 +4,10 @@ using Android.Content;
 using Android.OS;
 using Android.Views;
 using Android.Widget;
-using static Android.Resource;
 
 namespace Revento.Droid
 {
+    //Shows the details page, with all the inforation about one specific event, this activity is allways beijing called from the main activity 
     [Activity(Label = "Details")]
     public class DetailsActivity : Activity
     {

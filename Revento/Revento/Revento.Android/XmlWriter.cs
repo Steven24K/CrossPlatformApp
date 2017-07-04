@@ -1,15 +1,5 @@
-﻿using System; 
-using System.Collections.Generic; 
-using System.Linq; 
-using System.Text; 
-using System.Xml; 
-using System.Xml.Linq; 
- 
-using Android.App; 
+﻿using System.Xml;  
 using Android.Content; 
-using Android.OS; 
-using Android.Runtime; 
-using Android.Views; 
 using Android.Widget;
 using System.IO;
  
@@ -17,6 +7,18 @@ namespace Revento.Droid
 {
     public class XmlWriter
     {
+        /// <summary>
+        /// Method is used to add events to an XML file, this works in a console app, the only problem is that
+        /// the stream that is used is not writeable. The Stream needs to have acces to Assets folder, but it is readonly.
+        /// When this method is called it will Try to save the new content to the xml file, else it will show a Toast message.
+        /// </summary>
+        /// <param name="context">The activity from where the Asset folder is opened, usely its "this"</param>
+        /// <param name="file">The file from in the Assets folder in wich it needs to write.</param>
+        /// <param name="title">The events title</param>
+        /// <param name="date">The event date</param>
+        /// <param name="description">The event description</param>
+        /// <param name="adress">The event adress</param>
+        /// <param name="website">The event website, in the app this becomes a clickable hyperlink</param>
         public static void AddEvent(Context context,string file, string title, string date, string description, string adress, string website)
         {
             XmlDocument xd = new XmlDocument();

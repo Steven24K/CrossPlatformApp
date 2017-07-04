@@ -5,10 +5,10 @@ using Android.Content;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
-using Android.Support.V7.Widget;
 
 namespace Revento.Droid
 {
+    //The main screen, this is first activity that is shown when the app is run, mainlauncher has to be true
     [Activity(Label = "Revento", Theme = "@style/MyTheme", MainLauncher = true, Icon = "@drawable/Icon")]
     public class MainActivity : ListActivity
     {

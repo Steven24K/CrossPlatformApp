@@ -8,6 +8,7 @@ using Android.Widget;
 
 namespace Revento.Droid
 {
+    //Show the contact activity, this activity contains an input form and is connected to email
     [Activity(Label = "Contact")]
     public class ContactForm : Activity
     {
@@ -19,7 +20,7 @@ namespace Revento.Droid
         {
             base.OnCreate(bundle);
             SetContentView(Resource.Layout.Contact);
-
+            
             // Zoek onze items om een evenement te submitten
             _eventTitle = FindViewById<EditText>(Resource.Id.EventTitle);
             _dateDisplay = FindViewById<TextView>(Resource.Id.date_display);
