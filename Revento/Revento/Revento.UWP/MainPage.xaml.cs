@@ -57,18 +57,14 @@ namespace Revento.UWP
         public int index;
         public string adres;
         private Button button;
-        public static string category;
+        public string category;
+        public int eventID, categoryID;
 
         public XDocument loadedfile;
 
         public MainPage()
-        {                    
+        {
             LoadCategory("Alles");
-
-            this.InitializeComponent();
-
-            // Verander de ItemsSource naar de titles array en toon ze op het scherm
-            ListViewEvenementen.ItemsSource = titles;
         }
 
         public void LoadCategory(string categoryclick)
@@ -87,6 +83,10 @@ namespace Revento.UWP
                 description = evenement.ParseXML("description");
                 website = evenement.ParseXML("website");
                 address = evenement.ParseXML("address");
+
+                InitializeComponent();
+
+                ListViewEvenementen.ItemsSource = titles;
             }
             else
             {
@@ -95,75 +95,92 @@ namespace Revento.UWP
                 description = evenement.ParseXMLCategory("description", categoryclick);
                 website = evenement.ParseXMLCategory("website", categoryclick);
                 address = evenement.ParseXMLCategory("address", categoryclick);
+
+                InitializeComponent();
+
+                ListViewEvenementen.ItemsSource = titles;
             }
         }
 
         // Toon alle gegevens van een evenement wanneer er op een evenement wordt geklikt
         private void CategorySelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            var id = ListViewCategory.SelectedIndex;
-            Debug.WriteLine(id);
+            int categoryID = ListViewCategory.SelectedIndex;
+            Debug.WriteLine(categoryID);
 
-            switch (id)
+            switch (categoryID)
             {
                 case 0:
                     CategorieTitel.Text = "Overzicht Evenementen";
                     category = "Alles";
-                    Debug.WriteLine(category);
+                    LoadCategory(category);
+                    eventID += 1;
                     break;
                 case 1:
                     CategorieTitel.Text = "Automotive";
                     category = "Automotive";
-                    Debug.WriteLine(category);
+                    LoadCategory(category);
+                    eventID += 1;
                     break;
                 case 2:
                     CategorieTitel.Text = "Film";
                     category = "Film";
+                    LoadCategory(category);
                     break;
                 case 3:
                     CategorieTitel.Text = "Kunst";
                     category = "Kunst";
+                    LoadCategory(category);
                     break;
                 case 4:
                     CategorieTitel.Text = "Literatuur";
                     category = "Literatuur";
+                    LoadCategory(category);
                     break;
                 case 5:
                     CategorieTitel.Text = "Musea";
                     category = "Musea";
+                    LoadCategory(category);
                     break;
                 case 6:
                     CategorieTitel.Text = "Muziek";
                     category = "Muziek";
+                    LoadCategory(category);
                     break;
                 case 7:
                     CategorieTitel.Text = "Overig";
                     category = "Overig";
+                    LoadCategory(category);
                     break;
                 case 8:
                     CategorieTitel.Text = "Sport";
                     category = "Sport";
+                    LoadCategory(category);
                     break;
                 case 9:
                     CategorieTitel.Text = "Stad";
                     category = "Stad";
+                    LoadCategory(category);
                     break;
-            }
+            }            
         }
 
         // Toon alle gegevens van een evenement wanneer er op een evenement wordt geklikt
         private void EvenementenSelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            var id = ListViewEvenementen.SelectedIndex;
+            eventID = ListViewEvenementen.SelectedIndex;
 
-            TitelEvenement2.Text = titles[id];
-            DatumEvenement.Text = date[id];
-            BeschrijvingEvenement.Text = description[id];
-            AdresEvenement.Text = address[id];
-            WebsiteEvenement2.Content = website[id];
-            Uri uri = new Uri(website[id]);
+            TitelEvenement2.Text = titles[eventID];
+            DatumEvenement.Text = date[eventID];
+            BeschrijvingEvenement.Text = description[eventID];
+            AdresEvenement.Text = address[eventID];
+            WebsiteEvenement2.Content = website[eventID];
+            Uri uri = new Uri(website[eventID]);
             WebsiteEvenement2.NavigateUri = uri;
-            adres = address[id];
+            adres = address[eventID];
+
+            eventID = 0;
+            categoryID = 0;
         }
 
         // Handle de mail functionaliteit
