@@ -162,14 +162,19 @@ namespace Revento.UWP
                     category = "Stad";
                     LoadCategory(category);
                     break;
-            }            
+            }
         }
 
         // Toon alle gegevens van een evenement wanneer er op een evenement wordt geklikt
         private void EvenementenSelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             eventID = ListViewEvenementen.SelectedIndex;
-
+            
+            //Voor het geval dat de id kleiner is dan 0, anders komt er een index out of range exception
+            if(eventID < 0)
+            {
+                eventID += 1;
+            }
             TitelEvenement2.Text = titles[eventID];
             DatumEvenement.Text = date[eventID];
             BeschrijvingEvenement.Text = description[eventID];
