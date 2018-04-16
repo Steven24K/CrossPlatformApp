@@ -1,13 +1,10 @@
 ﻿using System;
-using System.Diagnostics;
 using System.IO;
 using System.Xml.Linq;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Email;
-using Windows.Storage;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Xamarin.Forms.Xaml;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -56,7 +53,6 @@ namespace Revento.UWP
         public string[] titles, date, description, website, address;
         public int index;
         public string adres;
-        private Button button;
         public string category;
         public int eventID, categoryID;
 
@@ -106,7 +102,7 @@ namespace Revento.UWP
         private void CategorySelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             int categoryID = ListViewCategory.SelectedIndex;
-            Debug.WriteLine(categoryID);
+            //Debug.WriteLine(categoryID);
 
             switch (categoryID)
             {

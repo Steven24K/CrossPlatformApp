@@ -24,6 +24,7 @@ namespace Revento.Droid
 
             // Lees het xml bestand door van voor naar achteren -> je krijgt hierbij de xml tags
             StreamReader reader = new StreamReader(xmldoc);
+            
             string readertext = reader.ReadToEnd();
 
             // Maak van de gelezen xml een XDocument object
